@@ -1,0 +1,8 @@
+mixin faq(value)
+	.faq.box-shadow.box-shadow--hover&attributes(attributes)
+		each item in value
+			.faq__header
+				p.font.text-uppercase= item.title
+				i.fas.fa-plus
+			.faq__body
+				p.font.font--md= item.text

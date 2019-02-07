@@ -1,0 +1,40 @@
+$view:(
+	height: 35px,
+	width: 70px,
+	border-radius: 5px,
+	border: 1px solid $base-border-color
+);
+
+.view{
+	margin: 10px 0;
+	cursor: pointer;
+	height: map-get($view, height);
+	width: map-get($view, width);
+	border: map-get($view, border);
+	border-radius: map-get($view, border-radius);
+	position: relative;
+	&:before{
+		content: '';
+		position: absolute;
+		left: 50%;
+		top: 0;
+		bottom: 0;
+		width: 1px;
+		background-color: $base-border-color;
+	}
+	&__item{
+		height: 100%;
+		width: 50%;
+		position: relative;
+		&:hover,
+		&--active{
+			span{
+				transition: all .5s;
+				color: $primary;
+			}
+		}
+		span{
+			@include absolute-center;
+		}
+	}
+}

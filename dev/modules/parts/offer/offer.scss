@@ -1,0 +1,177 @@
+$offer:(
+	background-color: rgba(255,255,255,1),
+	padding-first: 20px 10px,
+	padding-second: 20px 10px,
+	margin: 10px 0
+);
+
+.offer{
+	transition: all .5s;
+	margin: map-get($offer, margin);
+	background-color: map-get($offer, background-color);
+	&__header{
+		position: relative;
+		.img{
+			display: block;
+			height: 300px;
+			&__toggle{
+				@include absolute;
+				opacity: 0;
+				z-index: 1;
+				color: #fff;
+				font-size: 42px;
+				background-color: rgba(0,0,0,0.3);
+			}
+			&:hover{
+				.img__toggle{
+					transition: all .5s;
+					opacity: 1;
+				}
+			}
+		}
+		.where{
+			position: absolute;
+			left: 10px;
+			top: 10px;
+			padding: 5px 10px;
+			border-radius: 3px;
+			background-color: rgba(0,0,0,0.5);
+		}
+		.discount{
+			position: absolute;
+			right: 10px;
+			top: 10px;
+			height: 40px;
+			width: 40px;
+			border-radius: 100%;
+			background-color: $primary;
+		}
+	}
+	&__main{
+		.description{
+			&__item{
+				padding: 2px 0;
+				&.first{
+					*{
+						line-height: 1;
+					}
+				}
+				img{
+					height: 25px;
+					width: 25px;
+					margin-right: 5px;
+				}
+				i{
+					margin: 5px 0;
+					color: $primary;
+				}
+			}
+		}
+	}
+	&__footer{
+		border-top: 1px solid $base-border-color;
+	}
+}
+
+#proposal{
+	.row .cell{
+		padding: 0 15px;
+	}
+	.row.th{
+		.cell{
+			max-width: 25%;
+			flex: 1 1 25%;
+			@include media-max(1599){
+				max-width: 33%;
+				flex: 1 1 33%;
+			}
+			@include media-max(1279){
+				max-width: 50%;
+				flex: 1 1 50%;
+			}
+			@include media-max(767){
+				max-width: 100%;
+				flex: 1 1 100%;
+				.offer{
+					max-width: 500px;
+					margin-left: auto;
+					margin-right: auto;
+				}
+			}
+		}
+		.offer{
+			&__main,
+			&__footer{
+				padding: map-get($offer, padding-first);
+			}
+			.description{
+				&__item{
+					&.last{
+						a{
+							margin-left: 5px;
+							display: inline;
+						}
+					}
+				}
+			}
+		}
+	}
+	.row.list{
+		.cell{
+			max-width: 50%;
+			flex: 1 1 50%;
+			@include media-max(1279){
+				max-width: 100%;
+				flex: 1 1 100%;
+				.offer{
+					max-width: 850px;
+					margin-left: auto;
+					margin-right: auto;
+				}
+			}
+			@include media-max(767){
+				.offer{
+					max-width: 500px;
+					display: block;
+					&__header{
+						max-width: 100%;
+						flex: 1 1 100%;
+					}
+					&__wrapper{
+						max-width: 100%;
+						flex: 1 1 100%;
+					}
+					.description{
+						&__item{
+							&.last{
+								display: block;
+							}
+						}
+					}
+				}
+			}
+		}
+		.offer{
+			display: flex;
+			&__header{
+				max-width: 45%;
+				flex: 1 1 45%;
+			}
+			&__wrapper{
+				max-width: 55%;
+				flex: 1 1 55%;
+			}
+			&__main,
+			&__footer{
+				padding: map-get($offer, padding-second);
+			}
+			.description{
+				&__item{
+					&.last{
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}

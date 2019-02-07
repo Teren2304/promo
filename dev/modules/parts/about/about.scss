@@ -1,0 +1,22 @@
+$about:(
+	background-color: rgba(255,255,255,1),
+	padding: 20px,
+	margin: 20px 0
+);
+
+.about{
+	transition: all .5s;
+	margin: map-get($about, margin);
+	padding: map-get($about, padding);
+	background-color: map-get($about, background-color);
+	&:hover{
+		transform: translateY(-10px);
+	}
+	&__icon{
+		font-size: 24px;
+		color: $primary;
+	}
+	&__title{
+		margin: 10px 0;
+	}
+}

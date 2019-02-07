@@ -1,0 +1,16 @@
+.icon{
+	background-repeat: no-repeat;
+	&--plane,
+	&--region{
+		background-position: 0 0;
+		padding-left: 25px;
+		background-size: 20px 20px;
+	}
+
+	&--plane{
+		background-image: url('../img/plane.svg');
+	}
+	&--region{
+		background-image: url('../img/region.svg');
+	}
+}

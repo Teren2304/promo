@@ -1,0 +1,49 @@
+$sort:(
+	min-width: 220px
+);
+
+.sort{
+	min-width: map-get($sort, min-width);
+	cursor: pointer;
+	position: relative;
+	&__icon{
+		font-size: 30px;
+		color: $primary;
+		margin-right: 10px;
+	}
+	&__wrapper{
+		*{
+			line-height: 1.2;
+		}
+	}
+	&__dropdown{
+		display: none;
+		background-color: #fff;
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: calc(100% + 10px);
+		z-index: 9;
+	}
+	&__item{
+		border-bottom: 1px solid $base-border-color;
+		padding: 5px 10px;
+		&:hover,
+		&--active{
+			background-color: $primary;
+			*{
+				color: #fff;
+			}
+		}
+		&:last-child{
+			border-bottom: 0;
+		}
+		*{
+			transition: all .5s;
+			&:first-child{
+				font-size: 20px;
+				margin-right: 5px;
+			}
+		}
+	}
+}

@@ -1,0 +1,13 @@
+mixin button(value)
+	if value == 'link'
+		a.button&attributes(attributes)
+			if block
+				block
+	else if value == 'button'
+		button.button&attributes(attributes)
+			if block
+				block
+	else
+		.button&attributes(attributes)
+			if block
+				block

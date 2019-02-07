@@ -1,0 +1,15 @@
+$field:(
+	height: 45px,
+	padding: 10px,
+	background-color: #fff
+);
+
+.field{
+	width: 100%;
+	border: 0;
+	resize: none;
+	padding: map-get($field, padding);
+	height: map-get($field, height);
+	background-color: map-get($field, background-color);
+	@include placeholder(#666);
+}

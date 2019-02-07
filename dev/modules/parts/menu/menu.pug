@@ -1,0 +1,26 @@
+mixin menu()
+	- var menu = [{name: "Главная", link:"index.html"},{name: "Туры Украина"},{name: "Туры Россия"},{name: "Туры Казахстан"},{name: "Туры Беллоруссия"},{name: "Кто мы", link:"/about.html"}, {name: "Блог", link:"/blog.html"},{name: "Вопросы и ответы", link:"/faq.html"}];
+	ul.menu.flex-container.align-middle&attributes(attributes)
+		each item in menu
+			li.menu__item
+				if (!item.link)
+					a.font.link.text-shadow.menu__item--toggle
+						span= item.name
+						i.fas.fa-angle-down
+
+					.triangle.toggle
+						ul.toggle__list
+							li.toggle__item
+								a.font.text-ellipsis(href="#") Киев
+							li.toggle__item
+								a.font.text-ellipsis(href="#") Днепр
+							li.toggle__item
+								a.font.text-ellipsis(href="#") Львов
+							li.toggle__item
+								a.font.text-ellipsis(href="#") Одесса
+							li.toggle__item
+								a.font.text-ellipsis(href="#") Полтава
+
+				else
+					a.font.link.text-shadow(href=item.link)
+						span= item.name

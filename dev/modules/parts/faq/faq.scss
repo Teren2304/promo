@@ -1,0 +1,31 @@
+$faq:(
+	background-color: rgba(255,255,255,1),
+	margin: 10px 0
+);
+
+.faq{
+	margin: map-get($faq, margin);
+	background-color: map-get($faq, background-color);
+	&__header{
+		cursor: pointer;
+		position: relative;
+		padding: 20px 50px 20px 20px;
+		&--active{
+			i{
+				transform: rotateZ(45deg);
+			}
+		}
+		i{
+			position: absolute;
+			top: 18px;
+			right: 20px;
+			color: $primary;
+			font-size: 24px;
+		}
+	}
+	&__body{
+		display: none;
+		padding: 20px;
+		border-top: 1px solid $base-border-color;
+	}
+}

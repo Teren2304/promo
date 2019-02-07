@@ -1,0 +1,42 @@
+extends ../template/template.pug
+block content
+	.page
+		+header(style="background-image: url('./img/header/img/header-index.jpg')")
+			+nav.nav--default
+				.container.flex-container.align-middle.align-justify
+					+logo('/')
+					+menu
+					+show-menu
+
+			.container-fluid
+				.container
+					.header__info.text-center
+						h1.h1.h1--white Кто мы?
+						hr
+		main.main
+			section.section#about
+				.container-fluid
+					.container
+						.wrapper
+							.row.align-stretch
+								.col-12.col-sm-12.col-md-12.col-lg-12.col-xl-12
+									.text-center.cut.box-shadow.about
+										h6.h6 Почему мы?
+										p.font Понимая все большую заинтересованность туристов из Украины, России, Белоруссии и Казахстана получить сиюминутно актуальную информацию о самых горячие туристических предложениях от ведущих Туроператоров, начиная от популярной Болгарии, Египта и Турции, и заканчивая экзотическими Мальдивами, Доминиканой и Сейшелами, мы создали данный сервис, чтобы максимально быстро, а главное вовремя, сообщить Вам о наличии того или иного выгодного предложения на рынке Туристических поездок – как по цене так и по уровню скидки!
+								.col-12.col-sm-12.col-md-12.col-lg-4.col-xl-4
+									.text-center.cut.box-shadow.about
+										i.fas.fa-search.about__icon
+										p.font.font--lg.font--semibold.about__title Удобный поиск
+										p.font.about__text Удобный поиск, способ сортировки и фильтрации позволяет удобно сравнить скидки и цены отелей соответствующей категории между городами так и в целом по стране вылета, а также между предложениями различны
+											span.font.font--semibold  Туроператоров - Anex Tour, Coral Travel, TUI, Join Up, Pegas Touristik и другие.
+								.col-12.col-sm-12.col-md-12.col-lg-4.col-xl-4
+									.text-center.cut.about.box-shadow
+										i.far.fa-clock.about__icon
+										p.font.font--lg.font--semibold.about__title Экономия времени
+										p.font.about__text А время обновления информации, которое указывается на каждой из карточек результата, точно сообщит, как давно нами было найдено данное отдельное предложение. Это позволит оперативно проверить актуальность Тура на сайте Туроператора чтобы его приобрести.
+								.col-12.col-sm-12.col-md-12.col-lg-4.col-xl-4
+									.text-center.cut.about.box-shadow
+										i.far.fa-comment-alt.about__icon
+										p.font.font--lg.font--semibold.about__title Блок
+										p.font.about__text Также к Вашим услугам Блог информация о самых интересных предложениях, которые удалось найти за прошедшие дни.
+		+footer

@@ -1,0 +1,51 @@
+extends ../template/template.pug
+block content
+	.page
+		+header(style="background-image: url('./img/header/img/header-blog.jpg')")
+			+nav.nav--default
+				.container.flex-container.align-middle.align-justify
+					+logo('/')
+					+menu
+					+show-menu
+
+			.container-fluid
+				.container
+					.header__info.text-center
+						h1.h1.h1--white Блог
+						hr
+
+		main.main
+			section.section#options
+				.container-fluid
+					.container
+						.flex-container.align-middle.align-right
+							+view
+
+			section.section#proposal
+				.container-fluid
+					.container
+						+blog
+						.row
+							.cell
+								+offer
+							.cell
+								+offer
+							.cell
+								+offer
+							.cell
+								+offer
+
+						+blog
+						.row
+							.cell
+								+offer
+							.cell
+								+offer
+							.cell
+								+offer
+							.cell
+								+offer
+
+						+button('button').button--primary.button--more Предыдущие записи
+
+		+footer

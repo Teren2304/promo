@@ -1,0 +1,16 @@
+mixin sort(modifier)
+	.sort.flex-container.align-middle&attributes(attributes)
+		span.fas.fa-sort-amount-down.sort__icon
+		.sort__wrapper
+			p.font.text-uppercase Сортировка
+			p.font.font--sm.font--second.sort__checked Выберите вариант
+		.sort__dropdown
+			.sort__item.flex-container.aling-middle(data="price-asc")
+				p.fas.fa-sort-numeric-up
+				p.font От дорогим к дешевых
+			.sort__item.flex-container.aling-middle(data="price-desk")
+				p.fas.fa-sort-numeric-down
+				p.font От дешевых к дорогим
+			.sort__item.flex-container.aling-middle(data="discount-asc")
+				p.fas.fa-sort-alpha-up
+				p.font По скидке

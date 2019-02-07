@@ -1,0 +1,19 @@
+mixin field(value, placeholder, name, required)
+	if required
+		if value == 'email'
+			input(type="email", placeholder=placeholder, name=name, id=name, required).field&attributes(attributes)
+		else if value == 'text'
+			input(type="text", placeholder=placeholder, name=name, id=name, required).field&attributes(attributes)
+		else if value == 'password'
+			input(type="password", placeholder=placeholder, name=name, id=name, required).field&attributes(attributes)
+		else if value == 'date'
+			input(type="date", name=name, id=name required).field&attributes(attributes)
+	else
+		if value == 'email'
+			input(type="email", placeholder=placeholder, name=name, ).field&attributes(attributes)
+		else if value == 'text'
+			input(type="text", placeholder=placeholder, name=name, id=name,).field&attributes(attributes)
+		else if value == 'password'
+			input(type="password", placeholder=placeholder, name=name, id=name,).field&attributes(attributes)
+		else if value == 'date'
+			input(type="date", name=name, id=name,).field&attributes(attributes)

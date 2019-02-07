@@ -1,0 +1,141 @@
+extends ../template/template.pug
+block content
+	.page
+		+header(style="background-image: url('./img/header/img/header-index.jpg');")
+			+nav.nav--default
+				.container.flex-container.align-middle.align-justify
+					+logo('/')
+					+menu
+					+show-menu
+
+			.container-fluid
+				.container
+					.header__info.text-center
+						h1.h1.h1--white Villa Sonata Hotel
+						hr
+		main.main
+			section.section#details
+				.container-fluid
+					.container
+						.flex-container.flex-wrap
+							.left
+								.details.cut
+									img(src="./img/header/img/header-index.jpg").details__img
+									.details__wrapper
+										h6.h6 Об отеле:
+										p.font Отель расположен в центре Алании, в 300 метрах от знаменитого пляжа Клеопатра. Построен в 1996 году, последняя реновация прошла в 2015 году. Состоит из трех 4-этажных зданий. Уютный отель с семейной атмосферой. Небольшая, зеленая территория. Подходит для любителей спокойного отдыха в сочетании с прогулками по городу.
+									.row
+										.col-12.col-sm-12.col-md-12.col-lg-12.col-xl-12
+											.details__wrapper
+												h6.h6 Расположение:
+												p.font В 130 км от аэропорта г. Анталия, в центре г. Алания, на высоком берегу.
+										.col-12.col-sm-12.col-md-12.col-lg-6.col-xl-6
+											.details__wrapper
+												h6.h6 Пляж:
+												ul
+													li
+														p.font Пляж Клеопатра в 300 м.
+													li
+														p.font отель на 3-й пляжной линии или далее
+													li
+														p.font городской пляж
+													li
+														p.font песчаный пляж
+													li
+														p.font шезлонги
+													li
+														p.font зонтики
+										.col-12.col-sm-12.col-md-12.col-lg-6.col-xl-6
+											.details__wrapper
+												h6.h6 Услуги в отеле:
+												ul
+													li
+														p.font ресторан
+													li
+														p.font ресторан A la Carte
+													li
+														p.font кафе / бар
+													li
+														p.font открытый бассейн
+													li
+														p.font автостоянка
+													li
+														p.font прокат автомобилей
+													li
+														p.font бесплатный Wi-fi
+													li
+														p.font прачечная
+													li
+														p.font трансфер в/из аэропорта
+													li
+														p.font оплата платежными картами
+										.col-12.col-sm-12.col-md-12.col-lg-6.col-xl-6
+											.details__wrapper
+												h6.h6 Развлечение и спорт
+												ul
+													li
+														p.font сауна / баня / хамам
+													li
+														p.font джакузи
+													li
+														p.font Спа или велнес-центр
+
+							.right
+								article.cut.offer.box-shadow.margin.details__info
+									.offer__wrapper
+										main.offer__main
+											ul.description
+												li.flex-container.align-middle.description__item
+													img(src="./img/place.svg")
+													p.font Egypt, Hurgada
+												li.flex-container.align-middle.description__item
+													.rate
+														i.fas.fa-star
+														i.fas.fa-star
+														i.fas.fa-star
+														i.fas.fa-star
+														i.fas.fa-star
+												li.flex-container.align-middle.description__item
+													img(src="./img/plane.svg")
+													p.font Kiev, Ukraine
+												li.flex-container.align-middle.description__item
+													img(src="./img/calendar.svg")
+													p.font
+														span 09.12.2019
+														span -
+														span 09.12.2019
+														span (6 ночей)
+												li.flex-container.align-middle.description__item
+													img(src="./img/food.svg")
+													p.font
+														span Все включено
+														span (Ai)
+												li.flex-container.align-middle.description__item
+													img(src="./img/bed.svg")
+													p.font
+														span Standart Room
+														span (DBL)
+												li.flex-container.align-middle.description__item
+													img(src="./img/people.svg")
+													p.font
+														span 2
+														span взрослых
+														span 
+														span без детей
+												li.flex-container.align-baseline.align-justify.description__item
+													h6.h6.h6--second.text-through $618
+													h4.h4.h4--primary(style="margin: 0 auto 0 10px;") $512
+													h5.h5 -10%
+												li.flex-container.align-middle
+													p.font JoinUp
+
+										footer.offer__footer
+											h6.h6.h6--second Важно знать:
+											.flex-container.align-middle.align-justify
+												.wrap
+													p.font.font--semibold Check in from:
+													p.font.font--second 14:00
+												.wrap
+													p.font.font--semibold Check in from:
+													p.font.font--second 12:00
+		+footer

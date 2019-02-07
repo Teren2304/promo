@@ -1,0 +1,24 @@
+$button:(
+	width: 100%,
+	height: 45px,
+	padding: 10px
+);
+
+.button{
+	border: 0;
+	width: map-get($button, width);
+	height: map-get($button, height);
+	padding: map-get($button, padding);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: uppercase;
+	&--primary{
+		background-color: $primary;
+		color: #fff;
+	}
+	&--more{
+		max-width: 200px;
+		margin: 40px auto 0 auto;
+	}
+}
