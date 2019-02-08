@@ -1,0 +1,6 @@
+mixin form()
+	form.form&attributes(attributes)
+		+field('text', 'Ваше имя *', 'email','email', true)
+		+field('email', 'Ваш email *', 'email','email', true)
+		+textarea('Предмет обращения *', 'text', true)
+		+button('submit').button--primary Отправить

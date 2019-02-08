@@ -1008,7 +1008,12 @@ hr {
   resize: none;
   padding: 10px;
   height: 45px;
-  background-color: #fff; }
+  background-color: #fff;
+  color: black;
+  line-height: 1.5;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400; }
   .field::-webkit-input-placeholder {
     color: #666; }
   .field::-moz-placeholder {
@@ -1029,6 +1034,11 @@ hr {
   height: 150px;
   padding: 10px;
   resize: none;
+  color: black;
+  line-height: 1.5;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
   border: 1px solid #d4d4d4; }
   .textarea::-webkit-input-placeholder {
     color: #666; }
@@ -1110,9 +1120,17 @@ hr {
       background-color: rgba(255, 255, 255, 0.9); }
     @media only screen and (max-width: 991px) {
       .nav--default .menu {
+        display: block;
         background-color: rgba(255, 255, 255, 0.9); } }
+    @media only screen and (max-width: 991px) {
+      .nav--default .menu__item {
+        padding: 0 20px; } }
     .nav--default .menu__item .link {
       color: #fff; }
+      @media only screen and (max-width: 991px) {
+        .nav--default .menu__item .link {
+          color: #000;
+          display: inline-block; } }
       .nav--default .menu__item .link:before {
         background-color: #f45c5e; }
     .nav--default .show-menu__item {
@@ -1135,9 +1153,16 @@ hr {
         color: #fff; }
     @media only screen and (max-width: 991px) {
       .nav--fixed .menu {
+        display: block;
         background-color: rgba(0, 0, 0, 0.7); } }
+    @media only screen and (max-width: 991px) {
+      .nav--fixed .menu__item {
+        padding: 0 20px; } }
     .nav--fixed .menu__item .link {
       color: #fff; }
+      @media only screen and (max-width: 991px) {
+        .nav--fixed .menu__item .link {
+          display: inline-block; } }
       .nav--fixed .menu__item .link:before {
         background-color: #fff; }
     .nav--fixed .show-menu__item {
@@ -1646,6 +1671,13 @@ hr {
     padding: 20px 10px; }
   #proposal .row.list .offer .description__item.last {
     display: none; }
+
+.form {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  max-width: 340px; }
+  .form * {
+    margin: 10px 0; }
 
 /* Blog */
 .blog {

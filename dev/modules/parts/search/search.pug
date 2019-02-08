@@ -2,23 +2,23 @@ mixin search(value)
 	.search.flex-container.align-middle.align-right.flex-wrap&attributes(attributes)
 		.search__block
 			.dropdown
-				p.font.font--white.text-shadow Вылет из
+				p.font.font--white Вылет из
 				+field('text', 'Откуда', 'search-from', false)
 			.dropdown__block.dropdown__block--from.triangle
 		.search__block
 			.dropdown
-				p.font.font--white.text-shadow Прилет куда
+				p.font.font--white Прилет куда
 				+field('text', 'Куда', 'search-where', false)
 			.dropdown__block.dropdown__block--where.triangle
 		.search__block
-			p.font.font--white.text-shadow Интервал даты с
+			p.font.font--white Интервал даты с
 			+field('date', '', 'search-date-from', false)
 		.search__block
-			p.font.font--white.text-shadow Интервал даты по
+			p.font.font--white Интервал даты по
 			+field('date', '', 'search-date-to', false)
 
 		.search__block
-			p.font.font--white.text-shadow Количество ночей
+			p.font.font--white Количество ночей
 			.flex-container.align-middle.field.dropdown
 				p.font
 					| от 
@@ -40,7 +40,7 @@ mixin search(value)
 				+button('button').button--primary Готово
 
 		.search__block
-			p.font.font--white.text-shadow Класс отеля
+			p.font.font--white Класс отеля
 			.flex-container.align-middle.field.dropdown
 				p.font.search-rate
 			.dropdown__block.dropdown__block--rate.triangle
@@ -77,7 +77,7 @@ mixin search(value)
 				+button('button').button--primary Готово
 
 		.search__block
-			p.font.font--white.text-shadow Питание
+			p.font.font--white Питание
 			.flex-container.align-middle.field.dropdown
 				p.font.text-uppercase.search-food
 			.dropdown__block.dropdown__block--food.triangle
@@ -98,7 +98,7 @@ mixin search(value)
 				+button('button').button--primary Готово
 
 		.search__block
-			p.font.font--white.text-shadow Кто едет
+			p.font.font--white Кто едет
 			.flex-container.align-middle.field.dropdown
 				p.font
 					span.search-adults.search-adults-text
@@ -120,5 +120,5 @@ mixin search(value)
 				+button('button').button--primary Готово
 
 		.search__block
-			p.font.font--white.text-shadow &#160;
+			p.font.font--white &#160;
 			+button('button').button--primary Поиск

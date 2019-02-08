@@ -11,5 +11,10 @@ $field:(
 	padding: map-get($field, padding);
 	height: map-get($field, height);
 	background-color: map-get($field, background-color);
+	color: $base-font-color;
+	line-height: $base-font-line-height;
+	font-size: $base-font-size;
+	font-family: $base-font-family;
+	font-weight: $base-font-weight;
 	@include placeholder(#666);
 }

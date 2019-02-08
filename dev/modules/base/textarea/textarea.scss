@@ -3,15 +3,11 @@
 	height: 150px;
 	padding: 10px;
 	resize: none;
+	color: $base-font-color;
+	line-height: $base-font-line-height;
+	font-size: $base-font-size;
+	font-family: $base-font-family;
+	font-weight: $base-font-weight;
 	border: 1px solid $base-border-color;
 	@include placeholder(#666);
-	&--primary{
-
-	}
-	&--second{
-
-	}
-	&--third{
-		
-	}
 }

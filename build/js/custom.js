@@ -25,6 +25,7 @@ $('.faq').click(function(){
 
 
 
+
 function Nav(){
   this._nav = $('.nav');
   this._parent = $('.header');

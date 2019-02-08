@@ -4,7 +4,7 @@ mixin menu()
 		each item in menu
 			li.menu__item
 				if (!item.link)
-					a.font.link.text-shadow.menu__item--toggle
+					a.font.link.menu__item--toggle
 						span= item.name
 						i.fas.fa-angle-down
 
@@ -22,5 +22,5 @@ mixin menu()
 								a.font.text-ellipsis(href="#") Полтава
 
 				else
-					a.font.link.text-shadow(href=item.link)
+					a.font.link(href=item.link)
 						span= item.name

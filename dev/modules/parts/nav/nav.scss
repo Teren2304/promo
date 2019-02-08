@@ -32,11 +32,19 @@ $nav:(
 		}
 		.menu{
 			@include media-max(991){
+				display: block;
 				background-color: map-get($nav, background-color-default);
 			}
 			&__item{
+				@include media-max(991){
+					padding: 0 20px;
+				}
 				.link{
 					color: #fff;
+					@include media-max(991){
+						color: #000;
+						display: inline-block;
+					}
 					&:before{
 						background-color: $primary;
 					}
@@ -72,10 +80,17 @@ $nav:(
 		}
 		.menu{
 			@include media-max(991){
+				display: block;
 				background-color: map-get($nav, background-color-fixed);
 			}
 			&__item{
+				@include media-max(991){
+					padding: 0 20px;
+				}
 				.link{
+					@include media-max(991){	
+						display: inline-block;
+					}
 					color: #fff;
 					&:before{
 						background-color: #fff;
