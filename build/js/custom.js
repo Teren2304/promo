@@ -547,12 +547,21 @@ menuShowBlock.click(function(){
 function Sort(){
 	this.active = 0;
 	this.sortBlock = $('.sort');
+	this.sortIconBlock = $('.sort__icon');
 	this.sortDropdownBlock = $('.sort__dropdown');
 	this.sortValueBlock = $('.sort__checked');
+	this.sortIcon = 'fa-sort-amount-down';
 
-	this.select = function(data, attr){
-		this.sortValueBlock.text(data);
+	this.select = function(data, attr, icon, element){
 		this.active = attr;
+		this.sortIconBlock.removeClass(this.sortIcon);
+		this.sortIconBlock.addClass(icon);
+		this.sortIcon = icon;
+		//$(element).addClass('sort__item--active');
+		this.sortValueBlock.text(data);
+		
+		$('.sort__item').removeClass('sort__item--active');
+		$(element).addClass('sort__item--active');
 	}
 
 	this.dropdown = function(){
@@ -560,6 +569,7 @@ function Sort(){
 	}
 }
 var sort = new Sort();
+sort.sortIconBlock.addClass(sort.sortIcon);
 
 $('.sort').click(function(){
 	sort.dropdown();
@@ -568,8 +578,11 @@ $('.sort').click(function(){
 $('.sort__item').click(function(){
 	var text = $(this).find("p").text();
 	var attr = $(this).attr("data");
-	sort.select(text, attr);
+	var icon = $(this).attr("icon");
+	sort.select(text, attr, icon, this);
 });
+//sort__icon
+//.fas.fa-sort-amount-down
 function View(){
 	this.active = 0;
 	this.viewBlock = $('.view__item');
