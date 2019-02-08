@@ -4,13 +4,14 @@ mixin sort(modifier)
 		.sort__wrapper
 			p.font.text-uppercase Сортировка
 			p.font.font--sm.font--second.sort__checked Выберите вариант
-		.sort__dropdown
-			.sort__item.flex-container.aling-middle(data="price-asc", icon="fa-sort-numeric-up")
-				i.fas.fa-sort-numeric-up
-				p.font От дорогим к дешевых
-			.sort__item.flex-container.aling-middle(data="price-desk", icon="fa-sort-numeric-down")
-				i.fas.fa-sort-numeric-down
-				p.font От дешевых к дорогим
-			.sort__item.flex-container.aling-middle(data="discount-asc", icon="fa-sort-alpha-up")
-				i.fas.fa-sort-alpha-up
-				p.font По скидке
+		.sort__dropdown.triangle
+			.box-shadow.cut
+				.sort__item.flex-container.aling-middle(data="price-asc", icon="fa-sort-numeric-up")
+					i.fas.fa-sort-numeric-up
+					p.font От дорогим к дешевых
+				.sort__item.flex-container.aling-middle(data="price-desk", icon="fa-sort-numeric-down")
+					i.fas.fa-sort-numeric-down
+					p.font От дешевых к дорогим
+				.sort__item.flex-container.aling-middle(data="discount-asc", icon="fa-sort-alpha-up")
+					i.fas.fa-sort-alpha-up
+					p.font По скидке

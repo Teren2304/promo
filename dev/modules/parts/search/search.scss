@@ -9,14 +9,14 @@
 		width: calc((100% / 8 ) - 2px);
 		&:last-child{
 			margin: 0 1px;
-			.text-shadow{
+			.font{
 				display: none;
 			}
 		}
 		@include media-max(1366){
 			width: calc((100% / 6 ) - 2px);
 			&:last-child{
-				.text-shadow{
+				.font{
 					display: block;
 				}
 			}

@@ -18,12 +18,14 @@ $sort:(
 	}
 	&__dropdown{
 		display: none;
-		background-color: #fff;
 		position: absolute;
 		left: 0;
 		right: 0;
-		top: calc(100% + 10px);
+		top: calc(100% + 25px);
 		z-index: 9;
+		.box-shadow{
+			background-color: #fff;
+		}
 	}
 	&__item{
 		border-bottom: 1px solid $base-border-color;

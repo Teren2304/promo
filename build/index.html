@@ -260,15 +260,17 @@
                       <p class="font text-uppercase">Сортировка</p>
                       <p class="font font--sm font--second sort__checked">Выберите вариант</p>
                     </div>
-                    <div class="sort__dropdown">
-                      <div class="sort__item flex-container aling-middle" data="price-asc" icon="fa-sort-numeric-up"><i class="fas fa-sort-numeric-up"></i>
-                        <p class="font">От дорогим к дешевых</p>
-                      </div>
-                      <div class="sort__item flex-container aling-middle" data="price-desk" icon="fa-sort-numeric-down"><i class="fas fa-sort-numeric-down"></i>
-                        <p class="font">От дешевых к дорогим</p>
-                      </div>
-                      <div class="sort__item flex-container aling-middle" data="discount-asc" icon="fa-sort-alpha-up"><i class="fas fa-sort-alpha-up"></i>
-                        <p class="font">По скидке</p>
+                    <div class="sort__dropdown triangle">
+                      <div class="box-shadow cut">
+                        <div class="sort__item flex-container aling-middle" data="price-asc" icon="fa-sort-numeric-up"><i class="fas fa-sort-numeric-up"></i>
+                          <p class="font">От дорогим к дешевых</p>
+                        </div>
+                        <div class="sort__item flex-container aling-middle" data="price-desk" icon="fa-sort-numeric-down"><i class="fas fa-sort-numeric-down"></i>
+                          <p class="font">От дешевых к дорогим</p>
+                        </div>
+                        <div class="sort__item flex-container aling-middle" data="discount-asc" icon="fa-sort-alpha-up"><i class="fas fa-sort-alpha-up"></i>
+                          <p class="font">По скидке</p>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -683,9 +685,18 @@
                 </div>
                 <div class="col-12 col-sm-12 col-md-6 col-lg-5 col-xl-4">
                     <form class="form">
-                        <input class="field" type="text" placeholder="Ваше имя *" name="email" id="email" required>
-                        <input class="field" type="email" placeholder="Ваш email *" name="email" id="email" required>
-                        <textarea class="textarea" placeholder="Предмет обращения *" name="text" required></textarea>
+                      <div class="field-wrapper field-wrapper--small">
+                        <p class="font font--sm">Ваше имя *</p>
+                          <input class="field input" type="text" placeholder="" name="email" id="email" required>
+                      </div>
+                      <div class="field-wrapper field-wrapper--small">
+                        <p class="font font--sm">Ваш email *</p>
+                          <input class="field input" type="email" placeholder="" name="email" id="email" required>
+                      </div>
+                      <div class="field-wrapper field-wrapper--big">
+                        <p class="font font--sm">Предмет обращения *</p>
+                          <textarea class="textarea input" placeholder="" name="text" required></textarea>
+                      </div>
                         <button class="button button--primary" type="submit">Отправить
                         </button>
                     </form>
@@ -715,7 +726,7 @@
                     <li><a class="font font--white link" href="">Kiev</a></li>
                     <li><a class="font font--white link" href="">Dnepr</a></li>
                     <li><a class="font font--white link" href="">Odessa</a></li>
-                  </ul><a class="more text-left link" title="Загрузить больше"></a>
+                  </ul><a class="more text-left link" title="Загрузить больше" id="ukraine"></a>
                 </div>
                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-2">
                   <p class="font font--white text-uppercase">Туры из России</p>
@@ -725,7 +736,7 @@
                     <li><a class="font font--white link" href="">Kiev</a></li>
                     <li><a class="font font--white link" href="">Dnepr</a></li>
                     <li><a class="font font--white link" href="">Odessa</a></li>
-                  </ul><a class="more text-left link" title="Загрузить больше"></a>
+                  </ul><a class="more text-left link" title="Загрузить больше" id="russia"></a>
                 </div>
                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-2">
                   <p class="font font--white text-uppercase">Туры из Белоруссии</p>
@@ -735,7 +746,7 @@
                     <li><a class="font font--white link" href="">Kiev</a></li>
                     <li><a class="font font--white link" href="">Dnepr</a></li>
                     <li><a class="font font--white link" href="">Odessa</a></li>
-                  </ul><a class="more text-left link" title="Загрузить больше"></a>
+                  </ul><a class="more text-left link" title="Загрузить больше" id="belorus"></a>
                 </div>
                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-2">
                   <p class="font font--white text-uppercase">Туры из Казахстана</p>
@@ -745,7 +756,7 @@
                     <li><a class="font font--white link" href="">Kiev</a></li>
                     <li><a class="font font--white link" href="">Dnepr</a></li>
                     <li><a class="font font--white link" href="">Odessa</a></li>
-                  </ul><a class="more text-left link" title="Загрузить больше"></a>
+                  </ul><a class="more text-left link" title="Загрузить больше" id="kazahstan"></a>
                 </div>
                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-2">
                   <p class="font font--white text-uppercase">Информация</p>

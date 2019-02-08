@@ -1,6 +1,14 @@
 mixin form()
 	form.form&attributes(attributes)
-		+field('text', 'Ваше имя *', 'email','email', true)
-		+field('email', 'Ваш email *', 'email','email', true)
-		+textarea('Предмет обращения *', 'text', true)
+		.field-wrapper.field-wrapper--small
+			p.font.font--sm Ваше имя *
+			+field('text', '', 'email','email', true).input
+		
+		.field-wrapper.field-wrapper--small
+			p.font.font--sm Ваш email *
+			+field('email', '', 'email','email', true).input
+
+		.field-wrapper.field-wrapper--big
+			p.font.font--sm Предмет обращения *
+			+textarea('', 'text', true).input
 		+button('submit').button--primary Отправить
