@@ -264,10 +264,10 @@ function Search(searchFrom, searchwWere, searchDateFrom, searchDateTo, searchNig
 					'</div>';
 		});
 		if (list == 'from') {
-			$('.dropdown__block--from').append(html);
+			$('.dropdown__block--from .box-shadow').append(html);
 		}
 		else{
-			$('.dropdown__block--where').append(html);
+			$('.dropdown__block--where .box-shadow').append(html);
 		}
 	}
 

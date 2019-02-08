@@ -1,7 +1,7 @@
 mixin offer(link)
 	article.offer.cut.box-shadow.box-shadow--hover&attributes(attributes)
 		header.offer__header
-			a.img.img--hover(href="#")
+			a.img.img--hover(href="details.html")
 				img(src="./img/header/img/header-index.jpg")
 				.img__toggle.flex-container.align-center-middle
 					p.far.fa-eye
@@ -13,7 +13,7 @@ mixin offer(link)
 			main.offer__main
 				ul.description
 					li.flex-container.align-middle.align-justify.description__item.first
-						a.font.font--primary.text-uppercase Three Conrners Tri
+						a.font.font--primary.text-uppercase(href="details.html") Three Conrners Tri
 						p.font.font--lg.font--primary $512
 					li.flex-container.align-middle.description__item
 						i.fas.fa-star
@@ -49,8 +49,8 @@ mixin offer(link)
 							span без детей
 					li.description__item.last
 						p.font.font--second Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta illum ab labore esse tenetur voluptatum est eum laudantium ullam nesciunt, saepe asperiores, nam cum, vel eaque quibusdam numquam nihil sequi.
-							a.font.font--primary(href="#") Подробнее
+							a.font.font--primary(href="details.html") Подробнее
 			footer.offer__footer
 				.flex-container.align-middle.align-justify.flex-wrap
 					p.font.font--green Добавлено 15 минут назад
-					p.font JoinUp
+					img(src="./img/operator/20.png", alt="Join up").operator

@@ -82,6 +82,9 @@ $menu:(
 		&:after{
 			display: none;
 		}
+		.box-shadow{
+			box-shadow: none;
+		}
 	}
 	&__list{
 		max-height: 400px;

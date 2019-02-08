@@ -6,58 +6,58 @@ mixin footer(item)
 				.row.align-justify
 					.col-12.col-sm-12.col-md-12.col-lg-12.col-xl-12
 						+logo
-						p.font.font--white Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet facilis, magni suscipit culpa ea quos debitis maiores veniam, sint doloremque, provident dignissimos nulla magnam vitae fugit veritatis quae fuga. Repellat!
-						.flex-container.align-middle.flex-wrap
-							p.font.font--white.text-uppercase(style="margin-right: 10px;") Follow us: 
-							.flex-container.align-middle.social
+						.description
+							p.font.font--white Сервис сравнения изменений цен последних часов на актуальные туристические предложения во все самые востребованные Страны отдыха от ведущих операторов Украины, России, Белоруссии и Казахстана, позволяющий выбрать тот Тур, который Вам наиболее по душе.
+							.flex-container.align-middle.flex-wrap.social
+								p.font.font--white.text-uppercase(style="margin-right: 10px;") Follow us: 
 								a.fab.fa-facebook-f.social__item(href="#", target="_blank")
 								a.fab.fa-instagram.social__item(href="#", target="_blank")
 								a.fab.fa-telegram-plane.social__item(href="#", target="_blank")
 
 					.col-12.col-sm-12.col-md-6.col-lg-6.col-xl-2
-						p.font.font--white.text-right.text-uppercase Туры из Украины
+						p.font.font--white.text-uppercase Туры из Украины
 						hr
 						ul
 							each item in link
 								li
-									a(href=item.link).font.font--white.text-right= item.name
-						a.more(title="Загрузить больше")
+									a(href=item.link).font.font--white.link= item.name
+						a.more.text-left.link(title="Загрузить больше")
 
 					.col-12.col-sm-12.col-md-6.col-lg-6.col-xl-2
-						p.font.font--white.text-right.text-uppercase Туры из России
+						p.font.font--white.text-uppercase Туры из России
 						hr
 						ul
 							each item in link
 								li
-									a(href=item.link).font.font--white.text-right= item.name
-						a.more(title="Загрузить больше")
+									a(href=item.link).font.font--white.link= item.name
+						a.more.text-left.link(title="Загрузить больше")
 
 					.col-12.col-sm-12.col-md-6.col-lg-6.col-xl-2
-						p.font.font--white.text-right.text-uppercase Туры из Белоруссии
+						p.font.font--white.text-uppercase Туры из Белоруссии
 						hr
 						ul
 							each item in link
 								li
-									a(href=item.link).font.font--white.text-right= item.name
-						a.more(title="Загрузить больше")
+									a(href=item.link).font.font--white.link= item.name
+						a.more.text-left.link(title="Загрузить больше")
 
 					.col-12.col-sm-12.col-md-6.col-lg-6.col-xl-2
-						p.font.font--white.text-right.text-uppercase Туры из Казахстана
+						p.font.font--white.text-uppercase Туры из Казахстана
 						hr
 						ul
 							each item in link
 								li
-									a(href=item.link).font.font--white.text-right= item.name
-						a.more(title="Загрузить больше")
+									a(href=item.link).font.font--white.link= item.name
+						a.more.text-left.link(title="Загрузить больше")
 
 					.col-12.col-sm-12.col-md-6.col-lg-6.col-xl-2
-						p.font.font--white.text-right.text-uppercase Информация
+						p.font.font--white.text-uppercase Информация
 						hr
 						- var links = [{link: "blog.html", name: "Блог"}, {link: "about.html", name: "Кто мы"},{link: "about.html", name: "О Promo Tour"},{link: "faq.html", name: "Вопросы и Ответы"}];
 						ul
 							each item in links
 								li
-									a(href=item.link).font.font--white.text-right= item.name
+									a(href=item.link).font.font--white.link= item.name
 
 		.container-fluid.footer__copyright
 			.container.text-center

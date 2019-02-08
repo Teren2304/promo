@@ -31,9 +31,9 @@ var paths = {
         watch: ['./dev/modules/**/*.js', './dev/plugins/**/*.js', './dev/js/**/*.js']
     },
     img: {
-        src: ['./dev/modules/parts/**/img/*', './dev/modules/base/**/img/*', './dev/modules/layout/**/img/*', './dev/img/*'],
+        src: ['./dev/modules/parts/**/img/*', './dev/modules/base/**/img/*', './dev/modules/layout/**/img/*', './dev/img/**/*'],
         dest: './build/img/',
-        watch: ['./dev/modules/**/img/**/*', './dev/img/*']
+        watch: ['./dev/modules/**/img/**/*', './dev/img/**/*']
     },
     fonts: {
         src: './dev/fonts/*',

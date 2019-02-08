@@ -5,11 +5,13 @@ mixin search(value)
 				p.font.font--white Вылет из
 				+field('text', 'Откуда', 'search-from', false)
 			.dropdown__block.dropdown__block--from.triangle
+				.box-shadow.cut
 		.search__block
 			.dropdown
 				p.font.font--white Прилет куда
 				+field('text', 'Куда', 'search-where', false)
 			.dropdown__block.dropdown__block--where.triangle
+				.box-shadow.cut
 		.search__block
 			p.font.font--white Интервал даты с
 			+field('date', '', 'search-date-from', false)
@@ -27,75 +29,78 @@ mixin search(value)
 					span.search-night-to 
 					|  ночей
 			.dropdown__block.dropdown__block--night.triangle
-				.inner.flex-container.align-middle
-					p.font.inner__text От
-					button.decrement(min="1") -
-					p.font.font--md.inner__title.search-night-from(data="nightFrom")
-					button.increment(max="7") +
-				.inner.flex-container.align-middle
-					p.font.inner__text До
-					button.decrement(min="8") -
-					p.font.font--md.inner__title.search-night-to(data="nightTo")
-					button.increment(max="28") +
-				+button('button').button--primary Готово
+				.box-shadow.cut
+					.inner.flex-container.align-middle
+						p.font.inner__text От
+						button.decrement(min="1") -
+						p.font.font--md.inner__title.search-night-from(data="nightFrom")
+						button.increment(max="7") +
+					.inner.flex-container.align-middle
+						p.font.inner__text До
+						button.decrement(min="8") -
+						p.font.font--md.inner__title.search-night-to(data="nightTo")
+						button.increment(max="28") +
+					+button('button').button--primary Готово
 
 		.search__block
 			p.font.font--white Класс отеля
 			.flex-container.align-middle.field.dropdown
 				p.font.search-rate
 			.dropdown__block.dropdown__block--rate.triangle
-				.inner
-					ul.inner__list
-						li
-							+checkbox('allstar', 'Все отели')(name="rate", value="0")
-						li
-							input.checkbox(type="checkbox", id="2star")(name="rate", value="2")
-							label(for="2star")
-								i.fas.fa-star
-								i.fas.fa-star
-						li
-							input.checkbox(type="checkbox", id="3star")(name="rate", value="3")
-							label(for="3star")
-								i.fas.fa-star
-								i.fas.fa-star
-								i.fas.fa-star
-						li
-							input.checkbox(type="checkbox", id="4star")(name="rate", value="4", checked)
-							label(for="4star")
-								i.fas.fa-star
-								i.fas.fa-star
-								i.fas.fa-star
-								i.fas.fa-star
-						li
-							input.checkbox(type="checkbox", id="5star")(name="rate", value="5", checked)
-							label(for="5star")
-								i.fas.fa-star
-								i.fas.fa-star
-								i.fas.fa-star
-								i.fas.fa-star
-								i.fas.fa-star
-				+button('button').button--primary Готово
+				.box-shadow.cut
+					.inner
+						ul.inner__list
+							//- li
+							//- 	+checkbox('allstar', 'Все отели')(name="rate", value="0")
+							li
+								input.checkbox(type="checkbox", id="2star")(name="rate", value="2")
+								label(for="2star")
+									i.fas.fa-star
+									i.fas.fa-star
+							li
+								input.checkbox(type="checkbox", id="3star")(name="rate", value="3")
+								label(for="3star")
+									i.fas.fa-star
+									i.fas.fa-star
+									i.fas.fa-star
+							li
+								input.checkbox(type="checkbox", id="4star")(name="rate", value="4", checked)
+								label(for="4star")
+									i.fas.fa-star
+									i.fas.fa-star
+									i.fas.fa-star
+									i.fas.fa-star
+							li
+								input.checkbox(type="checkbox", id="5star")(name="rate", value="5", checked)
+								label(for="5star")
+									i.fas.fa-star
+									i.fas.fa-star
+									i.fas.fa-star
+									i.fas.fa-star
+									i.fas.fa-star
+					+button('button').button--primary Готово
 
 		.search__block
 			p.font.font--white Питание
 			.flex-container.align-middle.field.dropdown
 				p.font.text-uppercase.search-food
 			.dropdown__block.dropdown__block--food.triangle
-				.inner
-					ul.inner__list
-						li
-							+checkbox('ob', 'Без питания (OB)')(name="food", value="ob")
-						li
-							+checkbox('bb', 'Затрак (BB)')(name="food", value="bb")
-						li
-							+checkbox('hb', 'Завтрак и ужин (HB)')(name="food", value="hb")
-						li
-							+checkbox('fb', 'Завтрак, обед и ужин (FB)')(name="food", value="fb")
-						li
-							+checkbox('ai', 'Все включено (AI)')(name="food", value="ai", checked)
-						li
-							+checkbox('uai', 'Ультра все включено (UAI)')(name="food", value="uai", checked)
-				+button('button').button--primary Готово
+				.box-shadow.cut
+					.inner
+						ul.inner__list
+							li
+								+checkbox('ob', 'Без питания (OB)')(name="food", value="ob")
+							li
+								+checkbox('bb', 'Затрак (BB)')(name="food", value="bb")
+							li
+								+checkbox('hb', 'Завтрак и ужин (HB)')(name="food", value="hb")
+							li
+								+checkbox('fb', 'Завтрак, обед и ужин (FB)')(name="food", value="fb")
+							li
+								+checkbox('ai', 'Все включено (AI)')(name="food", value="ai", checked)
+							li
+								+checkbox('uai', 'Ультра все включено (UAI)')(name="food", value="uai", checked)
+					+button('button').button--primary Готово
 
 		.search__block
 			p.font.font--white Кто едет
@@ -104,20 +109,21 @@ mixin search(value)
 					span.search-adults.search-adults-text
 					span.search-children.search-children-text
 			.dropdown__block.dropdown__block--who.triangle
-				.inner
-					p.font.inner__subtitle Взрослые:
-					.flex-container.align-middle
-						button.decrement(min="1") -
-						p.font.font--md.inner__title.search-adults(data="adults")
-						button.increment(max="5") +
-				.inner
-					p.font.inner__subtitle Дети:
-					.flex-container.align-middle
-						button.decrement(min="0") -
-						p.font.font--md.inner__title.search-children(data="children")
-						button.increment(max="3") +
-				.wrapper
-				+button('button').button--primary Готово
+				.box-shadow.cut
+					.inner
+						p.font.inner__subtitle Взрослые:
+						.flex-container.align-middle
+							button.decrement(min="1") -
+							p.font.font--md.inner__title.search-adults(data="adults")
+							button.increment(max="5") +
+					.inner
+						p.font.inner__subtitle Дети:
+						.flex-container.align-middle
+							button.decrement(min="0") -
+							p.font.font--md.inner__title.search-children(data="children")
+							button.increment(max="3") +
+					.wrapper
+					+button('button').button--primary Готово
 
 		.search__block
 			p.font.font--white &#160;

@@ -9,6 +9,11 @@ $offer:(
 	transition: all .5s;
 	margin: map-get($offer, margin);
 	background-color: map-get($offer, background-color);
+
+	.operator{
+		max-width: 100px;
+	}
+
 	&__header{
 		position: relative;
 		.img{
@@ -156,6 +161,9 @@ $offer:(
 			&__header{
 				max-width: 45%;
 				flex: 1 1 45%;
+				.img{
+					height: 100%;
+				}
 			}
 			&__wrapper{
 				max-width: 55%;
