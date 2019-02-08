@@ -628,9 +628,25 @@ hr {
   background-color: #fff; }
 
 #feedback {
-  padding: 300px 0;
+  padding: 150px 0;
   background-attachment: fixed;
-  background-image: url("../img/about-index.jpg"); }
+  background-image: url("../img/about-index.jpg");
+  position: relative; }
+  #feedback:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.4); }
+  #feedback .h6 {
+    position: relative;
+    z-index: 1; }
+    @media only screen and (max-width: 767px) {
+      #feedback .h6 {
+        text-align: center; } }
 
 .cut {
   -webkit-border-radius: 5px;
@@ -1675,7 +1691,10 @@ hr {
 .form {
   background-color: rgba(0, 0, 0, 0.4);
   padding: 20px;
-  max-width: 340px; }
+  max-width: 340px;
+  z-index: 1;
+  position: relative;
+  margin: 20px auto; }
   .form * {
     margin: 10px 0; }
 

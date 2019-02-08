@@ -1,5 +1,5 @@
 mixin menu()
-	- var menu = [{name: "Главная", link:"index.html"},{name: "Туры Украина"},{name: "Туры Россия"},{name: "Туры Казахстан"},{name: "Туры Беллоруссия"},{name: "Кто мы", link:"/about.html"}, {name: "Блог", link:"/blog.html"},{name: "Вопросы и ответы", link:"/faq.html"}];
+	- var menu = [{name: "Главная", link:"index.html"},{name: "Туры Украина"},{name: "Туры Россия"},{name: "Туры Казахстан"},{name: "Туры Беллоруссия"},{name: "Кто мы", link:"about.html"}, {name: "Блог", link:"blog.html"},{name: "Вопросы и ответы", link:"faq.html"}];
 	ul.menu.flex-container.align-middle&attributes(attributes)
 		each item in menu
 			li.menu__item
