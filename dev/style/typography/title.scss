@@ -11,6 +11,14 @@ $title-size: (
 	'5': 24px,
 	'6': 22px
 );
+$title-size-media: (
+	'1': 42px, 
+	'2': 36px,
+	'3': 30px,
+	'4': 28px,
+	'5': 22px,
+	'6': 20px
+);
 $title-weight: (
 	'light': 300, 
 	'regular': 400, 
@@ -40,5 +48,13 @@ $title-weight: (
 @each $index, $status in $title-size{
 	.h#{$index}{
 		font-size: $status;
+	}
+}
+@media screen and(max-width: 767px){
+	@each $index, $status in $title-size-media{
+		.h#{$index}{
+			font-size: $status;
+			line-height: 1.2
+		}
 	}
 }

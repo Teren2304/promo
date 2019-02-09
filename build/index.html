@@ -128,7 +128,7 @@
                 <div class="search flex-container align-middle align-right flex-wrap">
                   <div class="search__block">
                     <div class="dropdown">
-                      <p class="font font--white">Вылет из</p>
+                      <p class="font font--sm font--second">Вылет из</p>
                         <input class="field" type="text" placeholder="Откуда" name="search-from" id="search-from">
                     </div>
                     <div class="dropdown__block dropdown__block--from triangle">
@@ -137,7 +137,7 @@
                   </div>
                   <div class="search__block">
                     <div class="dropdown">
-                      <p class="font font--white">Прилет куда</p>
+                      <p class="font font--sm font--second">Прилет куда</p>
                         <input class="field" type="text" placeholder="Куда" name="search-where" id="search-where">
                     </div>
                     <div class="dropdown__block dropdown__block--where triangle">
@@ -145,17 +145,23 @@
                     </div>
                   </div>
                   <div class="search__block">
-                    <p class="font font--white">Интервал даты с</p>
-                      <input class="field" type="date" name="search-date-from" id="search-date-from">
+                    <div class="dropdown">
+                      <p class="font font--sm font--second">Интервал даты с</p>
+                        <input class="field" type="date" name="search-date-from" id="search-date-from">
+                    </div>
                   </div>
                   <div class="search__block">
-                    <p class="font font--white">Интервал даты по</p>
-                      <input class="field" type="date" name="search-date-to" id="search-date-to">
+                    <div class="dropdown">
+                      <p class="font font--sm font--second">Интервал даты по</p>
+                        <input class="field" type="date" name="search-date-to" id="search-date-to">
+                    </div>
                   </div>
                   <div class="search__block">
-                    <p class="font font--white">Количество ночей</p>
-                    <div class="flex-container align-middle field dropdown">
-                      <p class="font">от <span class="search-night-from"> </span> до <span class="search-night-to"> </span> ночей</p>
+                    <div class="dropdown">
+                      <p class="font font--sm font--second">Количество ночей</p>
+                      <div class="flex-container align-middle field">
+                        <p class="font">от <span class="search-night-from"> </span> до <span class="search-night-to"> </span> ночей</p>
+                      </div>
                     </div>
                     <div class="dropdown__block dropdown__block--night triangle">
                       <div class="box-shadow cut">
@@ -177,9 +183,11 @@
                     </div>
                   </div>
                   <div class="search__block">
-                    <p class="font font--white">Класс отеля</p>
-                    <div class="flex-container align-middle field dropdown">
-                      <p class="font search-rate"></p>
+                    <div class="dropdown">
+                      <p class="font font--sm font--second">Класс отеля</p>
+                      <div class="flex-container align-middle field">
+                        <p class="font search-rate"></p>
+                      </div>
                     </div>
                     <div class="dropdown__block dropdown__block--rate triangle">
                       <div class="box-shadow cut">
@@ -209,9 +217,11 @@
                     </div>
                   </div>
                   <div class="search__block">
-                    <p class="font font--white">Питание</p>
-                    <div class="flex-container align-middle field dropdown">
-                      <p class="font text-uppercase search-food"></p>
+                    <div class="dropdown">
+                      <p class="font font--sm font--second">Питание</p>
+                      <div class="flex-container align-middle field">
+                        <p class="font text-uppercase search-food"></p>
+                      </div>
                     </div>
                     <div class="dropdown__block dropdown__block--food triangle">
                       <div class="box-shadow cut">
@@ -249,9 +259,11 @@
                     </div>
                   </div>
                   <div class="search__block">
-                    <p class="font font--white">Кто едет</p>
-                    <div class="flex-container align-middle field dropdown">
-                      <p class="font"><span class="search-adults search-adults-text"></span><span class="search-children search-children-text"></span></p>
+                    <div class="dropdown">
+                      <p class="font font--sm font--second">Кто едет</p>
+                      <div class="flex-container align-middle field">
+                        <p class="font"><span class="search-adults search-adults-text"></span><span class="search-children search-children-text"></span></p>
+                      </div>
                     </div>
                     <div class="dropdown__block dropdown__block--who triangle">
                       <div class="box-shadow cut">
@@ -278,9 +290,10 @@
                     </div>
                   </div>
                   <div class="search__block">
-                    <p class="font font--white">&#160;</p>
-                      <button class="button button--primary">Поиск
-                      </button>
+                    <div class="dropdown">
+                        <button class="button button--primary">Поиск
+                        </button>
+                    </div>
                   </div>
                 </div>
             </div>

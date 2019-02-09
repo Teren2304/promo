@@ -992,6 +992,26 @@ hr {
 .h6 {
   font-size: 22px; }
 
+@media screen and (max-width: 767px) {
+  .h1 {
+    font-size: 42px;
+    line-height: 1.2; }
+  .h2 {
+    font-size: 36px;
+    line-height: 1.2; }
+  .h3 {
+    font-size: 30px;
+    line-height: 1.2; }
+  .h4 {
+    font-size: 28px;
+    line-height: 1.2; }
+  .h5 {
+    font-size: 22px;
+    line-height: 1.2; }
+  .h6 {
+    font-size: 20px;
+    line-height: 1.2; } }
+
 /* Base modules */
 .button {
   border: 0;
@@ -1386,16 +1406,10 @@ hr {
     margin: 5px 1px;
     width: -webkit-calc((100% / 8 ) - 2px);
     width: calc((100% / 8 ) - 2px); }
-    .search__block:last-child {
-      margin: 0 1px; }
-      .search__block:last-child .font {
-        display: none; }
     @media only screen and (max-width: 1366px) {
       .search__block {
         width: -webkit-calc((100% / 6 ) - 2px);
-        width: calc((100% / 6 ) - 2px); }
-        .search__block:last-child .font {
-          display: block; } }
+        width: calc((100% / 6 ) - 2px); } }
     @media only screen and (max-width: 1280px) {
       .search__block {
         width: -webkit-calc((100% / 5 ) - 2px);
@@ -1416,7 +1430,21 @@ hr {
       margin-bottom: 5px; }
 
 .dropdown {
-  position: relative; }
+  position: relative;
+  height: 60px; }
+  .dropdown > p {
+    position: absolute;
+    top: 10px;
+    left: 10px; }
+  .dropdown .field {
+    height: 100%;
+    padding-top: 25px;
+    font-size: 16px;
+    white-space: nowrap; }
+    .dropdown .field * {
+      font-size: 16px; }
+  .dropdown .button {
+    height: 100%; }
   .dropdown__block {
     display: none;
     position: absolute;

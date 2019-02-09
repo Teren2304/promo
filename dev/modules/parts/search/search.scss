@@ -7,19 +7,8 @@
 		//border: 1px solid red;
 		margin: 5px 1px;
 		width: calc((100% / 8 ) - 2px);
-		&:last-child{
-			margin: 0 1px;
-			.font{
-				display: none;
-			}
-		}
 		@include media-max(1366){
 			width: calc((100% / 6 ) - 2px);
-			&:last-child{
-				.font{
-					display: block;
-				}
-			}
 		}
 		@include media-max(1280){
 			width: calc((100% / 5 ) - 2px);
@@ -40,8 +29,25 @@
 }
 
 .dropdown{
-	//border: 1px solid red;
 	position: relative;
+	height: 60px;
+	& > p{
+		position: absolute;
+		top: 10px;
+		left: 10px;
+	}
+	.field,{
+		height: 100%;
+		padding-top: 25px;
+		font-size: 16px;
+		white-space: nowrap;
+		*{
+			font-size: 16px;
+		}
+	}
+	.button{
+		height: 100%;
+	}
 	&__block{
 		display: none;
 		position: absolute;

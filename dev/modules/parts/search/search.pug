@@ -2,32 +2,35 @@ mixin search(value)
 	.search.flex-container.align-middle.align-right.flex-wrap&attributes(attributes)
 		.search__block
 			.dropdown
-				p.font.font--white Вылет из
+				p.font.font--sm.font--second Вылет из
 				+field('text', 'Откуда', 'search-from', false)
 			.dropdown__block.dropdown__block--from.triangle
 				.box-shadow.cut
 		.search__block
 			.dropdown
-				p.font.font--white Прилет куда
+				p.font.font--sm.font--second Прилет куда
 				+field('text', 'Куда', 'search-where', false)
 			.dropdown__block.dropdown__block--where.triangle
 				.box-shadow.cut
 		.search__block
-			p.font.font--white Интервал даты с
-			+field('date', '', 'search-date-from', false)
+			.dropdown
+				p.font.font--sm.font--second Интервал даты с
+				+field('date', '', 'search-date-from', false)
 		.search__block
-			p.font.font--white Интервал даты по
-			+field('date', '', 'search-date-to', false)
+			.dropdown
+				p.font.font--sm.font--second Интервал даты по
+				+field('date', '', 'search-date-to', false)
 
 		.search__block
-			p.font.font--white Количество ночей
-			.flex-container.align-middle.field.dropdown
-				p.font
-					| от 
-					span.search-night-from 
-					|  до 
-					span.search-night-to 
-					|  ночей
+			.dropdown
+				p.font.font--sm.font--second Количество ночей
+				.flex-container.align-middle.field
+					p.font
+						| от 
+						span.search-night-from 
+						|  до 
+						span.search-night-to 
+						|  ночей
 			.dropdown__block.dropdown__block--night.triangle
 				.box-shadow.cut
 					.inner.flex-container.align-middle
@@ -43,9 +46,10 @@ mixin search(value)
 					+button('button').button--primary Готово
 
 		.search__block
-			p.font.font--white Класс отеля
-			.flex-container.align-middle.field.dropdown
-				p.font.search-rate
+			.dropdown
+				p.font.font--sm.font--second Класс отеля
+				.flex-container.align-middle.field
+					p.font.search-rate
 			.dropdown__block.dropdown__block--rate.triangle
 				.box-shadow.cut
 					.inner
@@ -81,9 +85,10 @@ mixin search(value)
 					+button('button').button--primary Готово
 
 		.search__block
-			p.font.font--white Питание
-			.flex-container.align-middle.field.dropdown
-				p.font.text-uppercase.search-food
+			.dropdown
+				p.font.font--sm.font--second Питание
+				.flex-container.align-middle.field
+					p.font.text-uppercase.search-food
 			.dropdown__block.dropdown__block--food.triangle
 				.box-shadow.cut
 					.inner
@@ -103,11 +108,12 @@ mixin search(value)
 					+button('button').button--primary Готово
 
 		.search__block
-			p.font.font--white Кто едет
-			.flex-container.align-middle.field.dropdown
-				p.font
-					span.search-adults.search-adults-text
-					span.search-children.search-children-text
+			.dropdown
+				p.font.font--sm.font--second Кто едет
+				.flex-container.align-middle.field
+					p.font
+						span.search-adults.search-adults-text
+						span.search-children.search-children-text
 			.dropdown__block.dropdown__block--who.triangle
 				.box-shadow.cut
 					.inner
@@ -126,5 +132,5 @@ mixin search(value)
 					+button('button').button--primary Готово
 
 		.search__block
-			p.font.font--white &#160;
-			+button('button').button--primary Поиск
+			.dropdown
+				+button('button').button--primary Поиск
