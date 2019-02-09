@@ -366,10 +366,18 @@ $('.dropdown__block .checkbox').change(function(){
 });
 
 $('.dropdown').click(function(){
-	$(this).next('.dropdown__block').slideToggle();
+	if ($(this).next('.dropdown__block').hasClass('show')) {
+		$(this).next('.dropdown__block').hide(200).removeClass('show');
+	}
+	else{
+		$('.dropdown__block').not("show").hide().removeClass('show');
+		$(this).next('.dropdown__block').show(200).addClass('show');
+	}
 });
+
 $('.dropdown__block .button--primary').click(function(){
-	$(this).parent('.dropdown__block').slideToggle();
+	$(this).parent().parent('.dropdown__block').removeClass('show');
+	$(this).parent().parent('.dropdown__block').hide();
 });
 
 

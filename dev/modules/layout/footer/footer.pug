@@ -1,6 +1,5 @@
 mixin footer(item)
 	footer.footer&attributes(attributes)
-		- var link = [{link: "", name: "All city"},{link: "", name: "Kiev"},{link: "", name: "Dnepr"},{link: "", name: "Odessa"}];
 		.container-fluid.footer__info
 			.container
 				.row.align-justify
@@ -18,37 +17,25 @@ mixin footer(item)
 						p.font.font--white.text-uppercase Туры из Украины
 						hr
 						ul
-							each item in link
-								li
-									a(href=item.link).font.font--white.link= item.name
-						a.more.text-left.link(title="Загрузить больше")#ukraine
+						a.more.text-left.link(title="Загрузить больше", count="1")#ukraine
 
 					.col-12.col-sm-12.col-md-6.col-lg-6.col-xl-2
 						p.font.font--white.text-uppercase Туры из России
 						hr
 						ul
-							each item in link
-								li
-									a(href=item.link).font.font--white.link= item.name
-						a.more.text-left.link(title="Загрузить больше")#russia
+						a.more.text-left.link(title="Загрузить больше", count="1")#russia
 
 					.col-12.col-sm-12.col-md-6.col-lg-6.col-xl-2
 						p.font.font--white.text-uppercase Туры из Белоруссии
 						hr
 						ul
-							each item in link
-								li
-									a(href=item.link).font.font--white.link= item.name
-						a.more.text-left.link(title="Загрузить больше")#belorus
+						a.more.text-left.link(title="Загрузить больше", count="1")#belarus
 
 					.col-12.col-sm-12.col-md-6.col-lg-6.col-xl-2
 						p.font.font--white.text-uppercase Туры из Казахстана
 						hr
 						ul
-							each item in link
-								li
-									a(href=item.link).font.font--white.link= item.name
-						a.more.text-left.link(title="Загрузить больше")#kazahstan
+						a.more.text-left.link(title="Загрузить больше", count="1")#kazahstan
 
 					.col-12.col-sm-12.col-md-6.col-lg-6.col-xl-2
 						p.font.font--white.text-uppercase Информация

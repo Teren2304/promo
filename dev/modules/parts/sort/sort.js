@@ -18,8 +18,13 @@ function Sort(){
 		$(element).addClass('sort__item--active');
 	}
 
-	this.dropdown = function(){
-		this.sortDropdownBlock.slideToggle();
+	this.dropdown = function(element){
+		if (this.sortDropdownBlock.hasClass('show')) {
+		  this.sortDropdownBlock.hide(200).removeClass('show');
+		}
+		else{
+		  this.sortDropdownBlock.show(200).addClass('show');
+		}
 	}
 }
 var sort = new Sort();

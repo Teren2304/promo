@@ -18,8 +18,14 @@ function Nav(){
 
   this.showToggle = function(element){
     $('.menu__item .link').removeClass('link--active');
-    $(element).addClass('link--active')
-    $(element).next().slideToggle();
+    $(element).addClass('link--active');
+    if ($(element).next().hasClass('show')) {
+      $(element).next().hide(200).removeClass('show');
+    }
+    else{
+      $('.toggle').not("show").hide().removeClass('show');
+      $(element).next().show(200).addClass('show');
+    }
   }
 }
 
@@ -31,4 +37,9 @@ nav.stickyMenu();
 
 $('.menu__item--toggle').click(function(){
   nav.showToggle(this);
-})
+});
+
+$('.toggle__item').click(function(){
+  $('.menu__item .link').removeClass('link--active');
+  $('.toggle').hide().removeClass('show');
+});
