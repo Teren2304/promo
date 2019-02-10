@@ -89,7 +89,7 @@ $menu:(
 	&__list{
 		max-height: 400px;
 		overflow-y: auto;
-		@include scroll(0, rgba(255,255,255,0), 0, rgba(255,255,255,0), 0);
+		@include scroll(8px, $primary, 0, lighten(#000, 40%), 1px solid transparent);
 	}
 	&__item{
 		&:first-child{

@@ -8,13 +8,15 @@ mixin offer(link)
 			.where
 				p.font.font--white Египет, Хургада
 			.discount.flex-container.align-center-middle
-				p.font.font--white 15%
+				p.font.font--white -15%
 		.offer__wrapper
 			main.offer__main
 				ul.description
-					li.flex-container.align-middle.align-justify.description__item.first
+					li.flex-container.align-middle.description__item
 						a.font.font--primary.text-uppercase(href="details.html") Three Conrners Tri
-						p.font.font--lg.font--primary $512
+					li.flex-container.align-baseline.description__item
+						h6.h6.h6--second.text-through $618
+						h5.h5.h5--primary $512
 					li.flex-container.align-middle.description__item
 						i.fas.fa-star
 						i.fas.fa-star
@@ -43,9 +45,7 @@ mixin offer(link)
 					li.flex-container.align-middle.description__item
 						img(src="./img/people.svg")
 						p.font
-							span 2
-							span взрослых
-							span 
+							span 2 взрослых,
 							span без детей
 					li.description__item.last
 						p.font.font--second Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta illum ab labore esse tenetur voluptatum est eum laudantium ullam nesciunt, saepe asperiores, nam cum, vel eaque quibusdam numquam nihil sequi.

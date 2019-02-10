@@ -43,3 +43,9 @@ $('.toggle__item').click(function(){
   $('.menu__item .link').removeClass('link--active');
   $('.toggle').hide().removeClass('show');
 });
+
+/*$('body').not('menu__item--toggle').click(function(){
+    if ($('.toggle').hasClass('show')) {
+      $('.toggle').removeClass('show').hide();
+    }
+});*/

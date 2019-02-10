@@ -583,6 +583,9 @@ hr {
 #about .wrapper {
   max-width: 1000px;
   margin: 0 auto; }
+  #about .wrapper .row [class^="col-"] {
+    padding-top: 10px;
+    padding-bottom: 10px; }
 
 #faq .left,
 #faq .right {
@@ -1302,14 +1305,14 @@ hr {
     max-height: 400px;
     overflow-y: auto; }
     .toggle__list::-webkit-scrollbar {
-      width: 0; }
+      width: 8px; }
     .toggle__list::-webkit-scrollbar-thumb {
-      border: 1px solid 0;
+      border: 1px solid 1px solid transparent;
       background-clip: content-box;
-      background-color: rgba(255, 255, 255, 0); }
+      background-color: #666666; }
     .toggle__list::-webkit-scrollbar-track {
       border: 0;
-      background-color: rgba(255, 255, 255, 0); }
+      background-color: #f45c5e; }
   .toggle__item:first-child {
     border-top: 0; }
   @media only screen and (max-width: 991px) {
@@ -1618,8 +1621,6 @@ hr {
       background-color: #f45c5e; }
   .offer__main .description__item {
     padding: 2px 0; }
-    .offer__main .description__item.first * {
-      line-height: 1; }
     .offer__main .description__item img {
       height: 25px;
       width: 25px;
@@ -1627,6 +1628,13 @@ hr {
     .offer__main .description__item i {
       margin: 5px 0;
       color: #f45c5e; }
+    .offer__main .description__item p span {
+      margin-right: 3px; }
+      .offer__main .description__item p span:last-child {
+        margin-right: 0; }
+    .offer__main .description__item h5,
+    .offer__main .description__item h6 {
+      margin-right: 5px; }
   .offer__footer {
     border-top: 1px solid #d4d4d4; }
 
@@ -1788,10 +1796,10 @@ hr {
 
 /* About */
 .about {
+  height: 100%;
   -webkit-transition: all .5s;
   -o-transition: all .5s;
   transition: all .5s;
-  margin: 20px 0;
   padding: 20px;
   background-color: white; }
   .about:hover {

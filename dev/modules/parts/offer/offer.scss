@@ -56,11 +56,6 @@ $offer:(
 		.description{
 			&__item{
 				padding: 2px 0;
-				&.first{
-					*{
-						line-height: 1;
-					}
-				}
 				img{
 					height: 25px;
 					width: 25px;
@@ -69,6 +64,18 @@ $offer:(
 				i{
 					margin: 5px 0;
 					color: $primary;
+				}
+				p{
+					span{
+						margin-right: 3px;
+						&:last-child{
+							margin-right: 0;
+						}
+					}
+				}
+				h5, 
+				h6{
+					margin-right: 5px;
 				}
 			}
 		}

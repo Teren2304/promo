@@ -60,6 +60,12 @@
 	.wrapper{
 		max-width: 1000px;
 		margin: 0 auto;
+		.row{
+			[class^="col-"]{
+				padding-top: 10px;
+				padding-bottom: 10px;
+			}
+		}
 	}
 }
 
