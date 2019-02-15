@@ -45,6 +45,19 @@
 		height: 100%;
 	}
 
+	input[type="date"]::-webkit-outer-spin-button,
+	input[type="date"]::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
+	input[type="date"] {
+		-moz-appearance: textfield;
+	}
+	input[type="date"]:hover,
+	input[type="date"]:focus {
+		-moz-appearance: date-input;
+	}
+
 
 	.search-from,
 	.search-where{
@@ -67,6 +80,7 @@
 		top: calc(100% + 10px);
 		z-index: 11;
 		&--from{
+			//display: block!important;
 			width: 500px;
 			.country-show,
 			.city-show{
@@ -74,14 +88,47 @@
 				max-width: 50%;
 				flex: 1 1 50%;
 			}
+			@include media-max(756){
+				width: 100%;
+			}
 		}
-		&--where{
+		&--where{		
 			width: 1000px;
 			.country-show,
 			.city-show{
 				padding: 3px 10px;
 				max-width: 25%;
 				flex: 1 1 25%;
+				@include media-max(1021){
+					max-width: 33%;
+					flex: 1 1 33%;
+				}
+				@include media-max(991){
+					max-width: 50%;
+					flex: 1 1 50%;
+				}
+			}
+			@include media-max(1279){
+				width: 750px;
+			}
+			@include media-max(1023){
+				width: 600px;
+			}
+			@include media-max(991){
+				width: 500px;
+			}
+			@include media-max(767){
+				left: -150px;
+				&:after{
+					left: 50%;
+				}
+			}
+			@include media-max(756){
+				left: 0;
+				width: 100%;
+				&:after{
+					left: 30px;
+				}
 			}
 		}
 		.fly{

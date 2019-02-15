@@ -1,3 +1,3 @@
-$('.banner.banner--bottom').click(function(){
+$('.banner').click(function(){
 	$(this).hide();
 });

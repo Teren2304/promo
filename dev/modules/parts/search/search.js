@@ -39,6 +39,9 @@ function Data(){
 		if (rule) {
 			this.dateFrom = this.date('today');
 			this.dateWhere = this.date('next');
+
+			this.fieldDateFrom.attr("min", this.date('today'));
+			this.fieldDateWhere.attr("min", this.date('today'));
 		}
 		this.fieldFrom.find("span:first-child").text(this.countryFrom);
 		this.fieldFrom.find("span:last-child").text(this.cityFrom);
@@ -397,18 +400,27 @@ function Search(){
 
 	this.date = function(date){
 		var now = new Date(),
-	   		day = now.getDate(),
-	   		month = now.getMonth() + 1,
-	   		year = now.getFullYear(),
-	   		next = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 7),
-	   		nextDay = next.getDate(),
-	   		nextMonth = next.getMonth() + 1,
-	   		nextYear = next.getFullYear();
+			day = now.getDate(),
+			month = now.getMonth() + 1,
+			year = now.getFullYear(),
+			next = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 7),
+			nextDay = next.getDate(),
+			nextMonth = next.getMonth() + 1,
+			nextYear = next.getFullYear();
 	   	day = day < 10 ? "0" + day : day;
 	   	month = month < 10 ? "0" + month : month;
 	   	nextDay = nextDay < 10 ? "0" + nextDay : nextDay;
 	   	nextMonth = nextMonth < 10 ? "0" + nextMonth : nextMonth;
-	   	return date == 'today' ? year + '-' + month + '-' + day : nextYear + '-' + nextMonth + '-' + nextDay;	
+	   	if (date == 'today') {
+	   		return year + '-' + month + '-' + day;
+	   	}
+	   	else if(date == 'next'){
+	   		return nextYear + '-' + nextMonth + '-' + nextDay;
+	   	}
+	   	else if(date == 'max'){
+	   		return year + 2 + '-' + month + '-' + day;
+	   	}
+	   	//return date == 'today' ? year + '-' + month + '-' + day : nextYear + '-' + nextMonth + '-' + nextDay;	
 	}
 
 }
@@ -453,6 +465,23 @@ $('.dropdown__block .decrement').click(function(){
 });
 
 
+$(search.fieldDateFrom).keyup(function() {
+	if ($(this).val() > search.date('max')) {
+		$(this).val(search.date('today'));
+	}
+	else if($(this).val() < search.date('today')) {
+		$(this).val(search.date('today'));
+	}
+});
+
+$(search.fieldDateWhere).keyup(function() {
+	if ($(this).val() > search.date('max')) {
+		$(this).val(search.date('next'));
+	}
+	else if($(this).val() < search.date('today')) {
+		$(this).val(search.date('next'));
+	}
+});
 
 $('.dropdown').click(function(){
 	if ($(this).next('.dropdown__block').hasClass('show')) {

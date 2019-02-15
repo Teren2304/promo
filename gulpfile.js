@@ -9,7 +9,8 @@ var gulp = require('gulp'),
     plumber = require('gulp-plumber'),
     concat = require("gulp-concat"),
     uglify = require('gulp-uglifyjs'),
-    cssnano = require('gulp-cssnano');
+    cssnano = require('gulp-cssnano'),
+    htmlmin = require('gulp-htmlmin');
 
 var paths = {
     dirs: {
@@ -52,6 +53,10 @@ gulp.task('html', function() {
     return gulp.src(paths.html.src)
         .pipe(plumber())
         .pipe(pug({ pretty: true }))
+        .pipe(htmlmin({
+            collapseWhitespace: true,
+            removeComments: true
+        }))
         .pipe(gulp.dest(paths.html.dest))
         .pipe(browserSync.reload({stream: true }));
 });
@@ -61,7 +66,7 @@ gulp.task('css', function(){
         .pipe(sass())
         .pipe(autoprefixer({browsers: ['last 20 versions']}))
         .pipe(concat('style.css'))
-        //.pipe(cssnano('style.css'))
+        .pipe(cssnano('style.css'))
         .pipe(gulp.dest(paths.css.dest))
         .pipe(browserSync.reload({stream: true}));
 });
@@ -70,7 +75,7 @@ gulp.task('js', function () {
     return gulp.src(paths.js.src)
         .pipe(plumber())
         .pipe(concat('custom.js'))
-        //.pipe(uglify('custom.js'))
+        .pipe(uglify('custom.js'))
         .pipe(gulp.dest(paths.js.dest))
         .pipe(browserSync.reload({stream: true}));
 });

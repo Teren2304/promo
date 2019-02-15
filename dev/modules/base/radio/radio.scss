@@ -15,7 +15,7 @@ $radio:(
 		position: relative;
 		margin-right: 5px;
 		height: map-get($radio, height);
-		width: map-get($radio, width);
+		min-width: map-get($radio, width);
 		border-radius: map-get($radio, border-radius);
 		background-color: map-get($radio, background-color);
 		&:before{
