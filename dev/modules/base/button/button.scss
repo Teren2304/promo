@@ -14,8 +14,11 @@ $button:(
 	justify-content: center;
 	text-transform: uppercase;
 	&--primary{
-		background-color: $primary;
 		color: #fff;
+		background-color: $primary;
+		&:hover{
+			background-color: darken($primary, 10%);
+		}
 	}
 	&--more{
 		max-width: 200px;

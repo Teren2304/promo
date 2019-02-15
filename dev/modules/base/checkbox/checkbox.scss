@@ -1,4 +1,53 @@
-@import './mixin';
+$checkbox:(
+	height: 15px,
+	width: 15px,
+	color: #fff,
+	border-radius: 3px,
+	border-color: $primary,
+	background-color: #d4d4d4,
+	background-color-active: $primary
+);
 .checkbox{
-	@include checkbox-custom;
+	display: none;
+	& + label{
+		padding: 5px 0;
+		position: relative;
+		display: flex;
+		line-height: 1;
+		padding-left: map-get($checkbox, width) + 5px;
+		&:before {
+			content: "";
+			width: map-get($checkbox, width);
+			height: map-get($checkbox, height);
+			line-height: 1;
+			text-align: center;
+			transition: all .5s;
+			position: absolute;
+			left: 0;
+			top: 5px;
+			@if (map-get($checkbox, border-radius) != 0){
+				border-radius: map-get($checkbox, border-radius);
+			}
+			background-color: map-get($checkbox, background-color);
+		}
+		i{
+			transition: all .5s;
+			font-size: 14px;
+		}
+		&:hover{
+			color: map-get($radio, border-color);
+			&:before{
+				border: 1px solid map-get($radio, border-color);
+			}
+			i{
+				color: $primary;
+			}
+		}
+	}
+	&:checked + label:before {
+		background-color: map-get($checkbox, background-color-active);
+	}
+	&:checked + label i{
+		color: $primary;
+	}
 }

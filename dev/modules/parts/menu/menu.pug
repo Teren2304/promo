@@ -1,5 +1,5 @@
 mixin menu()
-	- var menu = [{name: "Главная", link:"index.html"},{name: "Туры Украина"},{name: "Туры Россия"},{name: "Туры Казахстан"},{name: "Туры Белоруссия"},{name: "Кто мы", link:"about.html"}, {name: "Блог", link:"blog.html"},{name: "Вопросы и ответы", link:"faq.html"}];
+	- var menu = [{name: "Главная", link:"index.html"},{name: "Туры Украина", id: "toggleUkraine"},{name: "Туры Россия", id: "toggleRussia"},{name: "Туры Казахстан", id: "toggleKazahstan"},{name: "Туры Белоруссия", id: "toggleBelarus"},{name: "Кто мы", link:"about.html"}, {name: "Блог", link:"blog.html"},{name: "Вопросы и ответы", link:"faq.html"}];
 	ul.menu.flex-container.align-middle&attributes(attributes)
 		each item in menu
 			li.menu__item
@@ -10,35 +10,7 @@ mixin menu()
 
 					.triangle.toggle
 						.box-shadow.cut
-							ul.toggle__list
-								li.toggle__item
-									a.font.text-ellipsis(href="#") Винница
-								li.toggle__item
-									a.font.text-ellipsis(href="#") Днепр
-								li.toggle__item
-									a.font.text-ellipsis(href="#") Запорожье
-								li.toggle__item
-									a.font.text-ellipsis(href="#") Киев
-								li.toggle__item
-									a.font.text-ellipsis(href="#") Кривой Рог
-								li.toggle__item
-									a.font.text-ellipsis(href="#") Львов
-								li.toggle__item
-									a.font.text-ellipsis(href="#") Николаев
-								li.toggle__item
-									a.font.text-ellipsis(href="#") Одесса
-								li.toggle__item
-									a.font.text-ellipsis(href="#") Полтава
-								li.toggle__item
-									a.font.text-ellipsis(href="#") Ровно
-								li.toggle__item
-									a.font.text-ellipsis(href="#") Ужгород
-								li.toggle__item
-									a.font.text-ellipsis(href="#") Харьков
-								li.toggle__item
-									a.font.text-ellipsis(href="#") Херсон
-								li.toggle__item
-									a.font.text-ellipsis(href="#") Черновцы
+							ul.toggle__list(id=item.id)
 
 				else
 					a.font.link(href=item.link)

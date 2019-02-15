@@ -1,173 +1,125 @@
+function Data(){
+	Store.call(this);
 
-//#search-from
-//#search-where
-//#search-date-from
-//#search-date-to
+	this.countryFrom = "Все страны";
+	this.countryWhere = "Все страны";
+	this.cityFrom = "";
+	this.cityWhere = "";
+	this.dateFrom = '';
+	this.dateWhere = '';
+	this.nightFrom = 7;
+	this.nightWhere = 21;
+	this.rateHotel = [4, 5];
+	this.foodHotel = ['AI', 'UAI'];
+	this.adults = 2;
+	this.children = 0;
+	this.childrenAgeFirst = 0;
+	this.childrenAgeSecond = 0;
+	this.childrenAgeThird = 0;
 
-//.search-night-from
-//.search-night-to
-//.search-rate
-//.search-food
-//.search-adults
-//.search-children
-
-
-
-function Search(searchFrom, searchwWere, searchDateFrom, searchDateTo, searchNightFrom, searchNightTo, searchRate, searchFood, searchAdults, searchChildren){
-	this.searchFrom = searchFrom;
-	this.searchwWere = searchwWere;
-	this.searchDateFrom = searchDateFrom;
-	this.searchDateTo = searchDateTo;
-	this.searchNightFrom = searchNightFrom;
-	this.searchNightTo = searchNightTo;
-	this.searchRate = searchRate;
-	this.searchFood = searchFood;
-	this.searchAdults = searchAdults;
-	this.searchChildren = searchChildren;
-
-	this.listFrom = [
-		{
-			country: "Украина",
-			city: "Киев"
-		},
-		{
-			country: "Россия",
-			city: "Харьков"
-		},
-		{
-			country: "Россия",
-			city: "Хача"
-		},
-		{
-			country: "Украина",
-			city: "Днепр"
-		},
-		{
-			country: "Украина",
-			city: "Львов"
-		}
-	];
-	this.listTo = [
-		{
-			country: "Украина",
-			city: "Киев"
-		},
-		{
-			country: "Украина",
-			city: "Харьков"
-		}
-	];
-
-
+	this.fieldFrom = $('.search-from');
+	this.fieldWhere = $('.search-where');
+	this.fieldDateFrom = $('.search-date-from');
+	this.fieldDateWhere = $('.search-date-to');
+	this.fieldNightFrom = $('.search-night-from');
+	this.fieldNightWhere = $('.search-night-to');
 	this.fieldRate = $('.search-rate');
 	this.fieldFood = $('.search-food');
 	this.fieldAdults = $('.search-adults');
 	this.fieldChildren = $('.search-children');
-	this.fieldNightFrom = $('.search-night-from');
-	this.fieldNightTo = $('.search-night-to');
-
-	this.fieldSearchFrom = $('#search-date-from');
-	this.fieldSearchTo = $('#search-date-to');
+	this.fieldChildrenAgeFirst = $('.child1');
+	this.fieldChildrenAgeSecond = $('.child2');
+	this.fieldChildrenAgeThird = $('.child3');
 
 
-	this.setData = function(){
-		this.getDataFromTo('from');
-		this.getDataFromTo('where');
 
-		this.fieldAdults.text(this.searchAdults);
-		this.fieldChildren.text(this.searchChildren);
-		this.fieldNightFrom.text(this.searchNightFrom);
-		this.fieldNightTo.text(this.searchNightTo);
-		this.fieldFood.text(this.searchFood);
-		this.fieldRate.text(this.searchRate);
 
-		this.fieldSearchFrom.val(this.date('today')).attr('min', this.date('today'));
-		this.fieldSearchTo.val(this.date('next')).attr('min', this.date('today'));
 
+	this.DrawData = function(rule){
+		if (rule) {
+			this.dateFrom = this.date('today');
+			this.dateWhere = this.date('next');
+		}
+		this.fieldFrom.find("span:first-child").text(this.countryFrom);
+		this.fieldFrom.find("span:last-child").text(this.cityFrom);
+		this.fieldWhere.find("span:first-child").text(this.countryWhere);
+		this.fieldWhere.find("span:last-child").text(this.cityWhere);
+		this.fieldDateFrom.val(this.dateFrom);
+		this.fieldDateWhere.val(this.dateWhere);
+		this.fieldNightFrom.text(this.nightFrom);
+		this.fieldNightWhere.text(this.nightWhere);
+		this.fieldRate.text(this.rateHotel);
+		this.fieldFood.text(this.foodHotel);
+		this.fieldAdults.text(this.adults);
+		this.fieldChildren.text(this.children);
+		this.fieldChildrenAgeFirst.val(this.childrenAgeFirst);
+		this.fieldChildrenAgeSecond.val(this.childrenAgeSecond);
+		this.fieldChildrenAgeThird.val(this.childrenAgeThird);
+
+
+		this.loadCountry('from');
+		this.loadCountry('where');
+		//this.loadCity('from', this.findActiveCountry('from'), this.countryFrom);
+		//this.loadCity('where', this.findActiveCountry('where'), this.countryWhere);
+		this.loadCity('from', 0, this.countryFrom);
+		this.loadCity('where', 0, this.countryWhere);
 		this.textForAdults();
 		this.textForChildren();
 	}
+}
 
-	this.disabled = function(elements, element, value, action){
-		if (action == 'increment') {
-			if (elements == value){
-				$(element).addClass('disabled');
-			}
-			else{
-				$(element).parent().find('button').removeClass('disabled');
-			}
-		}
-		else{
-			if (elements == value) {
-				$(element).addClass('disabled');
-			}
-			else{
-				$(element).parent().find('button').removeClass('disabled');
-			}
-		}
-	}
-	/* Check increment, decrement button on min, max value */
+function Search(){
+	Data.call(this);
 
-	this.textForAdults = function(){
-		var text;
-		if (this.searchAdults == 1) {
-			text = " взрослый, ";
-		}
-		else{
-			text = " взрослых, ";
-		}
-		$('.search-adults-text').append(text)
+	this.send = function(){
+		console.log(this.countryFrom);
+		console.log(this.countryWhere);
+		console.log(this.cityFrom);
+		console.log(this.cityWhere);
+		console.log(this.dateFrom);
+		console.log(this.dateWhere);
+		console.log(this.nightFrom);
+		console.log(this.nightWhere);
+		console.log(this.rateHotel);
+		console.log(this.foodHotel);
+		console.log(this.adults);
+		console.log(this.children);
+		console.log(this.childrenAgeFirst);
+		console.log(this.childrenAgeSecond);
+		console.log(this.childrenAgeThird);
 	}
-	/* Insert text for adults */
-
-	this.textForChildren = function(){
-		var text;
-		if (this.searchChildren == 0) {
-			text = "без детей";
-			$('.search-children-text').text('');
-		}
-		else if(this.searchChildren == 1){
-			text = " ребенок";
-		}
-		else{
-			text = " детей";
-		}
-		$('.search-children-text').append(text)
-	}
-	/* Insert text for children */
 
 	this.increment = function(max, item, element){
 		if (item == 'nightFrom') {
-			if (this.searchNightFrom < max) {
-				this.searchNightFrom ++;
-				this.fieldNightFrom.text(this.searchNightFrom);
+			if (this.nightFrom < max) {
+				this.nightFrom ++;
+				this.fieldNightFrom.text(this.nightFrom);
 			}
-			this.disabled(this.searchNightFrom, element, max, 'increment');
+			this.disabled(this.nightFrom, element, max, 'increment');
 		}
 		else if (item == 'nightTo') {
-			if (this.searchNightTo  < max) {
-				this.searchNightTo ++;
-				this.fieldNightTo.text(this.searchNightTo);
+			if (this.nightWhere  < max) {
+				this.nightWhere ++;
+				this.fieldNightWhere.text(this.nightWhere);
 			}
-			this.disabled(this.searchNightTo, element, max, 'increment');
+			this.disabled(this.nightWhere, element, max, 'increment');
 		}
 		else if (item == 'adults') {
-			if (this.searchAdults  < max) {
-				this.searchAdults ++;
-				this.fieldAdults.text(this.searchAdults)
+			if (this.adults  < max) {
+				this.adults ++;
+				this.fieldAdults.text(this.adults)
 			}
-			this.disabled(this.searchAdults, element, max, 'increment');
-			
 			this.textForAdults();
+			this.disabled(this.adults, element, max, 'increment');	
 		}
 		else if (item == 'children') {
-			if (this.searchChildren  < max) {
-				this.searchChildren ++;
-				this.fieldChildren.text(this.searchChildren);
-				var html = '<div class="inner" id="child'+this.searchChildren+'">'+
+			if (this.children  < max) {
+				this.children ++;
+				this.fieldChildren.text(this.children);
+				var html = '<div class="inner" id="child'+this.children+'">'+
 				              '<div class="flex-container align-middle align-justify">'+
-				                '<p class="font">'+this.searchChildren+' ребенок: </p>'+
-				                  '<select class="select inner__select child'+this.searchChildren+'">'+
+				                '<p class="font">'+this.children+' ребенок: </p>'+
+				                  '<select class="select inner__select child'+this.children+'">'+
 				                    '<option value="0">До года</option>'+
 				                    '<option value="1">1 год</option>'+
 				                    '<option value="2">2 года</option>'+
@@ -187,112 +139,261 @@ function Search(searchFrom, searchwWere, searchDateFrom, searchDateTo, searchNig
 			    $('.dropdown__block--who .wrapper').append(html);
 			}
 			this.textForChildren();
-			this.disabled(this.searchChildren, element, max, 'increment');
+			this.disabled(this.children, element, max, 'increment');
 		}
-	};
-	/* Increment */
+	}; /* Increment */
+
 
 	this.decrement = function(min, item, element){
 		if (item == 'nightFrom') {
-			if (this.searchNightFrom  > min) {
-				this.searchNightFrom --;
-				this.fieldNightFrom.text(this.searchNightFrom);
+			if (this.nightFrom  > min) {
+				this.nightFrom --;
+				this.fieldNightFrom.text(this.nightFrom);
 			}
-			this.disabled(this.searchNightFrom, element, min, 'decrement');
+			this.disabled(this.nightFrom, element, min, 'decrement');
 		}
 		else if (item == 'nightTo') {
-			if (this.searchNightTo  > min) {
-				this.searchNightTo --;
-				this.fieldNightTo.text(this.searchNightTo);
+			if (this.nightWhere  > min) {
+				this.nightWhere --;
+				this.fieldNightWhere.text(this.nightWhere);
 			}
-			this.disabled(this.searchNightTo, element, min, 'decrement');
+			this.disabled(this.nightWhere, element, min, 'decrement');
 		}
 		else if (item == 'adults') {
-			if (this.searchAdults  > min) {
-				this.searchAdults --;
-				this.fieldAdults.text(this.searchAdults)
+			if (this.adults  > min) {
+				this.adults --;
+				this.fieldAdults.text(this.adults)
 			}
 			this.textForAdults();
-			this.disabled(this.searchAdults, element, min, 'decrement');
+			this.disabled(this.adults, element, min, 'decrement');
 		}
 		else if (item == 'children') {
-			if (this.searchChildren  > min) {
-				$('.dropdown__block--who .wrapper #child' + this.searchChildren).remove();
-				this.searchChildren --;
-				this.fieldChildren.text(this.searchChildren)
+			if (this.children  > min) {
+				$('.dropdown__block--who .wrapper #child' + this.children).remove();
+				this.children --;
+				this.fieldChildren.text(this.children)
 			}
 			this.textForChildren();
-			this.disabled(this.searchChildren, element, min, 'decrement');
+			this.disabled(this.children, element, min, 'decrement');
 		}
-	};
-	/* Decrement */
+	}; /* Decrement */
 
-	this.checkbox = function (item, name, value){
-		if (item == 'add') {
-			if (name == 'food') {
-				this.searchFood.push(value);
-				this.fieldFood.text(this.searchFood);
 
-				if (true) {}
+	this.textForAdults = function(){
+		var text;
+		if (this.adults == 1) {
+			text = " взрослый, ";
+		}
+		else{
+			text = " взрослых, ";
+		}
+		$('.search-adults-text').append(text)
+	}; /* Insert text for adults */
+
+	this.textForChildren = function(){
+		var text;
+		if (this.children == 0) {
+			text = "без детей";
+			$('.search-children-text').text('');
+		}
+		else if(this.children == 1){
+			text = " ребенок";
+		}
+		else{
+			text = " детей";
+		}
+		$('.search-children-text').append(text)
+	}; /* Insert text for children */
+
+
+	this.disabled = function(elements, element, value, choose){
+		if (choose == 'increment') {
+			if (elements == value){
+				$(element).addClass('disabled');
 			}
 			else{
-				this.searchRate.push(value);
-				this.fieldRate.text(this.searchRate);
+				$(element).parent().find('button').removeClass('disabled');
 			}
 		}
 		else{
-			if (name == 'food') {
-				this.searchFood.splice(this.searchFood.indexOf(value), 1);
-				this.fieldFood.text(this.searchFood);
+			if (elements == value) {
+				$(element).addClass('disabled');
 			}
 			else{
-				this.searchRate.splice(this.searchRate.indexOf(value), 1);
-				this.fieldRate.text(this.searchRate);
+				$(element).parent().find('button').removeClass('disabled');
 			}
-		}	
-	}
-	/* Action for rate and food checkbox */
+		}
+	}; /* Check increment, decrement button on min, max value */
 
-	this.getDataFromTo = function(list){
-		var html = ''
-		$((list == 'from') ? this.listFrom : this.listTo).each(function(index, item){
-			html += '<div class="inner choose">'+
-						'<div class="icon icon--plane">'+
-							'<p class="font choose__text">'+ item.country +'</p>'+
-							'<p class="font font--sm choose__text">'+ item.city +'</p>'+
+	this.findActiveCountry = function(choose){
+		var wrapper = (choose == 'from') ? $('.dropdown__block--from .fly__wrapper') : $('.dropdown__block--where .fly__wrapper');
+		return wrapper.find('.radio--active').attr("data");
+	};
+
+	this.loadCountry = function(choose){
+		var self = this,
+			html = "",
+			list = (choose == 'from') ? this.from : this.where,
+			wrapper = (choose == 'from') ? $('.dropdown__block--from .fly__wrapper') : $('.dropdown__block--where .fly__wrapper');
+		list.unshift({name: 'Все страны'});
+
+		$.each(list, function (index, item) {
+			html += '<div class="city-show">';
+					if (item.name == self.countryFrom || item.name == self.countryWhere) {
+						html += '<div class="radio radio--active" country="'+item.name+'" data="'+index+'">';
+					}
+					else{
+						html += '<div class="radio" country="'+item.name+'" data="'+index+'">';
+					}
+					html += '<span></span>'+
+					  		'<label class="font">'+item.name+'</label>'+
 						'</div>'+
 					'</div>';
 		});
-		if (list == 'from') {
-			$('.dropdown__block--from .box-shadow').append(html);
-		}
-		else{
-			$('.dropdown__block--where .box-shadow').append(html);
-		}
-	}
+		wrapper.append(html);
+	};
 
-	this.searchData = function(value){
-		$('#dropdown__from .inner').each(function(){
-			var found = false;
-			//console.log($(this).find('p:last-child').text())
-			if($(this).find('p:last-child').text().toLowerCase().indexOf(value.toLowerCase()) >= 0){
-				found = 'true';
-				console.log(this)
-			}
-			if (found == 'true') {
-				//$('.choose--nothing').hide();
-				$(this).show();
+	this.loadCity = function(choose, data, value){
+		var html = "",
+			list = (choose == 'from') ? this.from : this.where,
+			wrapper = (choose == 'from') ? $('.dropdown__block--from .fly__list') : $('.dropdown__block--where .fly__list');
+			title = (choose == 'from') ? $('.dropdown__block--from .fly__title.last') : $('.dropdown__block--where .fly__title.last');
+
+		wrapper.empty("");
+		if (data != 0) {
+			if (list[data].city.length != 0) {
+				title.show();
+				$.each(list[data].city, function(index, item) {
+					html += '<div class="city-show">'+
+								'<div class="radio" country="'+value+'" city="'+item+'">'+
+									'<span></span>'+
+							  		'<label class="font">'+item+'</label>'+
+								'</div>'+
+							'</div>';
+				});
 			}
 			else{
-				$('.choose--nothing').show();
-				$(this).hide();
+				title.hide();
 			}
-		});
-	}
+		}
+		else{
+			title.hide();
+		}
+		wrapper.append(html);
+	};
 
-	this.dropdown = function(){
+	this.checkCountry = function(choose, element){
+		var block;
+		if (choose == 'from') {
+			$('.dropdown__block--from .fly__wrapper .radio').removeClass('radio--active');
+			block = $('.search-from');
+		}
+		else{
+			$('.dropdown__block--where .fly__wrapper .radio').removeClass('radio--active');
+			block = $('.search-where');
+		}
+		$(element).addClass('radio--active');
+		var data = $(element).attr("data");
+		var country = $(element).attr("country");
 
-	}
+		block.find('span:first-child').text(country);
+		block.find('span:last-child').text('').removeClass('active');
+		if (choose == 'from') {
+			this.countryFrom = country;
+		}
+		else{
+			this.countryWhere = country;
+		}
+		this.loadCity(choose, data, country);
+	};
+
+	this.checkCity = function(what, element){
+		var activeElement,
+			block,
+			value_city = $(element).attr("city");
+		if (what == 'from') {
+			activeElement = $('.dropdown__block--from .fly__list .radio--active');
+			block = $('.search-from');
+		}
+		else{
+			activeElement = $('.dropdown__block--where .fly__list .radio--active');
+			block = $('.search-where');
+		}
+
+		if ($(element).hasClass('radio--active')) {
+			$(element).removeClass('radio--active');
+			block.find('span:last-child').text('').removeClass('active');
+		}
+		else{
+			if (what == 'from') {
+				$('.dropdown__block--from .fly__list .radio').removeClass('radio--active');
+			}
+			else{
+				$('.dropdown__block--where .fly__list .radio').removeClass('radio--active');
+			}
+			block.find('span:last-child').text(value_city).addClass('active');
+
+
+			if (what == 'from') {
+				this.cityFrom = value_city;
+			}
+			else{
+				this.cityWhere = value_city;
+			}
+
+			$(element).addClass('radio--active');
+		}
+	};
+
+	this.checkRateFood = function (choose, element){
+		var value = $(element).attr("value");
+		if ($(element).not('.radio--all').hasClass('radio--active')) {
+			$(element).removeClass('radio--active');
+			if (choose == 'rate') {
+				this.rateHotel.splice(this.rateHotel.indexOf(value), 1);
+				this.fieldRate.text(this.rateHotel);
+				if (this.fieldRate.text() == '') {
+					$(element).parent().parent().find('.radio--all').addClass('radio--active');
+					this.fieldRate.text("Все отели");
+				}
+			}
+			else{
+				this.foodHotel.splice(this.foodHotel.indexOf(value), 1);
+				this.fieldFood.text(this.foodHotel);
+				if (this.fieldFood.text() == '') {
+					$(element).parent().parent().find('.radio--all').addClass('radio--active');
+					this.fieldFood.text("Любое питание");
+				}
+			}
+
+		}
+		else{
+			if (value == 0) {
+				$(element).parent().parent().find('.radio--active').removeClass('radio--active');
+				if (choose == 'rate') {
+					this.rateHotel.length = 0;
+					this.fieldRate.text("Все отели");
+				}
+				else{
+					this.foodHotel.length = 0;
+					this.fieldFood.text("Любое питание");
+				}
+				$(element).addClass('radio--active');
+				return;
+			}
+			$(element).addClass('radio--active');
+			$(element).parent().parent().find('.radio--all').removeClass('radio--active');
+			if (choose == 'rate') {
+				this.rateHotel.push(value);
+				this.fieldRate.text(this.rateHotel);	
+			}
+			else{
+				this.foodHotel.push(value);
+				this.fieldFood.text(this.foodHotel);
+			}
+		}
+	}; /* Action for rate and food checkbox */
+
 
 	this.date = function(date){
 		var now = new Date(),
@@ -303,44 +404,41 @@ function Search(searchFrom, searchwWere, searchDateFrom, searchDateTo, searchNig
 	   		nextDay = next.getDate(),
 	   		nextMonth = next.getMonth() + 1,
 	   		nextYear = next.getFullYear();
-
-	    if (month < 10){ 
-	        month = "0" + month;
-	    }
-	    if (day < 10){
-	        day = "0" + day;
-	    }
-	    if (nextDay < 10){ 
-	        nextDay = "0" + nextDay;
-	    }
-	    if (nextMonth < 10){
-	        nextMonth = "0" + nextMonth;
-	    }
-
-	    if (date == 'today') {
-	    	return year + '-' + month + '-' + day;	
-	    }
-	    else{
-	    	return nextYear + '-' + nextMonth + '-' + nextDay;	
-	    }
+	   	day = day < 10 ? "0" + day : day;
+	   	month = month < 10 ? "0" + month : month;
+	   	nextDay = nextDay < 10 ? "0" + nextDay : nextDay;
+	   	nextMonth = nextMonth < 10 ? "0" + nextMonth : nextMonth;
+	   	return date == 'today' ? year + '-' + month + '-' + day : nextYear + '-' + nextMonth + '-' + nextDay;	
 	}
-	/* Date for input  */
+
 }
+var search = new Search();
+search.DrawData(true);
 
-var searchFrom = '';
-var searchwWere = '';
-var searchDateFrom = '';
-var searchDateTo = '';
-var searchNightFrom = 6;
-var searchNightTo = 12;
-var searchRate = [4, 5];
-var searchFood = ['ai', 'uai'];
-var searchAdults = 2;
-var searchChildren = 0;
 
-var search = new Search(searchFrom, searchwWere, searchDateFrom, searchDateTo, searchNightFrom, searchNightTo, searchRate, searchFood, searchAdults, searchChildren);
-search.setData();
+$(document).on("click", ".dropdown__block--from .fly__wrapper .radio", function(){
+	search.checkCountry('from', this);
+});
 
+$(document).on("click", ".dropdown__block--where .fly__wrapper .radio", function(){
+	search.checkCountry('where', this);
+});
+
+$(document).on("click", ".dropdown__block--from .fly__list .radio", function(){
+	search.checkCity('from', this);
+});
+
+$(document).on("click", ".dropdown__block--where .fly__list .radio", function(){
+	search.checkCity('where', this);
+});
+
+$(document).on("click", ".dropdown__block--rate .radio", function(){
+	search.checkRateFood('rate', this);
+});
+
+$(document).on("click", ".dropdown__block--food .radio", function(){
+	search.checkRateFood('food', this);
+});
 
 $('.dropdown__block .increment').click(function(){
 	var attr = $(this).prev('.inner__title').attr('data');
@@ -354,16 +452,7 @@ $('.dropdown__block .decrement').click(function(){
 	search.decrement(min, attr, this);
 });
 
-$('.dropdown__block .checkbox').change(function(){
-	var value = $(this).val();
-		name = $(this).attr("name")
-	if ($(this).is(':checked')){
-		search.checkbox('add', name, value)
-	} 
-	else {
-		search.checkbox('delete', name, value)
-	}
-});
+
 
 $('.dropdown').click(function(){
 	if ($(this).next('.dropdown__block').hasClass('show')) {
@@ -378,9 +467,4 @@ $('.dropdown').click(function(){
 $('.dropdown__block .button--primary').click(function(){
 	$(this).parent().parent('.dropdown__block').removeClass('show');
 	$(this).parent().parent('.dropdown__block').hide();
-});
-
-
-$('#search-from').keyup(function(){
-	search.searchData($(this).val());
 });

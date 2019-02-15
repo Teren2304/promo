@@ -72,9 +72,8 @@ $menu:(
 .toggle{
 	display: none;
 	position: absolute;
-	left: 0;
-	right: 0;
-	top: calc(100% + 10px);
+	width: 200px;
+	top: calc(100% + 20px);
 	@include media-max(991){
 		position: relative;
 		top: 0;
@@ -83,13 +82,14 @@ $menu:(
 			display: none;
 		}
 		.box-shadow{
+			border-radius: 0;
 			box-shadow: none;
 		}
 	}
 	&__list{
 		max-height: 400px;
 		overflow-y: auto;
-		@include scroll(8px, $primary, 0, lighten(#000, 40%), 1px solid transparent);
+		@include scroll(6px, #d4d4d4, 0, lighten(#000, 40%), 1px solid transparent);
 	}
 	&__item{
 		&:first-child{

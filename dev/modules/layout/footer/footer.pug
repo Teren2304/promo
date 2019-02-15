@@ -6,7 +6,8 @@ mixin footer(item)
 					.col-12.col-sm-12.col-md-12.col-lg-12.col-xl-12
 						+logo
 						.description
-							p.font.font--white Сервис сравнения изменений цен последних часов на актуальные туристические предложения во все самые востребованные Страны отдыха от ведущих операторов Украины, России, Белоруссии и Казахстана, позволяющий выбрать тот Тур, который Вам наиболее по душе.
+							p.font.font--white.font--lg Свяжитесь с нами: 
+								a(href="#").font--white.text-underline info@promotour.net
 							.flex-container.align-middle.flex-wrap.social
 								p.font.font--white.text-uppercase(style="margin-right: 10px;") Follow us: 
 								a.fab.fa-facebook-f.social__item(href="#", target="_blank")
@@ -40,7 +41,7 @@ mixin footer(item)
 					.col-12.col-sm-12.col-md-6.col-lg-6.col-xl-2
 						p.font.font--white.text-uppercase Информация
 						hr
-						- var links = [{link: "blog.html", name: "Блог"},{link: "about.html", name: "О Promo Tour"},{link: "faq.html", name: "Вопросы и Ответы"}];
+						- var links = [{link: "blog.html", name: "Блог"},{link: "about.html", name: "Кто мы"},{link: "faq.html", name: "Вопросы и Ответы"}];
 						ul
 							each item in links
 								li

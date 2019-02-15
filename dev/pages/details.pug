@@ -20,7 +20,10 @@ block content
 						.flex-container.flex-wrap
 							.left
 								.details.cut
-									img(src="./img/header/img/header-index.jpg").details__img
+									.relative
+										img(src="./img/header/img/header-index.jpg").details__img
+										.discount.discount--big.flex-container.align-center-middle
+											h5.h5.h5--white -15%
 									.details__wrapper
 										h6.h6 Об отеле:
 										p.font Отель расположен в центре Алании, в 300 метрах от знаменитого пляжа Клеопатра. Построен в 1996 году, последняя реновация прошла в 2015 году. Состоит из трех 4-этажных зданий. Уютный отель с семейной атмосферой. Небольшая, зеленая территория. Подходит для любителей спокойного отдыха в сочетании с прогулками по городу.
@@ -79,7 +82,6 @@ block content
 														p.font джакузи
 													li
 														p.font Спа или велнес-центр
-
 							.right
 								article.cut.offer.box-shadow.margin.details__info
 									.offer__wrapper
@@ -124,18 +126,14 @@ block content
 														span без детей
 												li.flex-container.align-baseline.align-justify.description__item
 													h6.h6.h6--second.text-through $618
-													h4.h4.h4--primary(style="margin: 0 auto 0 10px;") $512
-													h5.h5 -10%
-												li
-													img(src="./img/operator/20.png", alt="Join up").operator
+													h4.h4.h4--primary(style="margin: 0 auto 0 5px;") $512
 
 										footer.offer__footer
-											h6.h6.h6--second Важно знать:
-											.flex-container.align-middle.align-justify
-												.wrap
-													p.font.font--semibold Check in from:
-													p.font.font--second 14:00
-												.wrap
-													p.font.font--semibold Check in from:
-													p.font.font--second 12:00
+											.flex-container.align-middle.align-justify.flex-wrap
+												p.font.font--green
+													i.far.fa-clock
+													span Обновлено 15 минут назад
+												a(href="#" target="_blank").operator
+													img(src="./img/operator/20.png", alt="Join up")
+								+banner.banner--details
 		+footer

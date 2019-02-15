@@ -3,10 +3,17 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <meta name="msapplication-TileColor" content="#f45c5e">
+    <meta name="theme-color" content="#fffff">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="./img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="./img/favicon/safari-pinned-tab.svg" color="#f45c5e">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Index</title>
+    <title>PromoTour</title>
   </head>
   <body>
     <div class="page">
@@ -19,88 +26,28 @@
                     <li class="menu__item"><a class="font link menu__item--toggle"><span>Туры Украина</span><i class="fas fa-angle-down"></i></a>
                       <div class="triangle toggle">
                         <div class="box-shadow cut">
-                          <ul class="toggle__list">
-                            <li class="toggle__item"><a class="font text-ellipsis" href="#">Винница</a></li>
-                            <li class="toggle__item"><a class="font text-ellipsis" href="#">Днепр</a></li>
-                            <li class="toggle__item"><a class="font text-ellipsis" href="#">Запорожье</a></li>
-                            <li class="toggle__item"><a class="font text-ellipsis" href="#">Киев</a></li>
-                            <li class="toggle__item"><a class="font text-ellipsis" href="#">Кривой Рог</a></li>
-                            <li class="toggle__item"><a class="font text-ellipsis" href="#">Львов</a></li>
-                            <li class="toggle__item"><a class="font text-ellipsis" href="#">Николаев</a></li>
-                            <li class="toggle__item"><a class="font text-ellipsis" href="#">Одесса</a></li>
-                            <li class="toggle__item"><a class="font text-ellipsis" href="#">Полтава</a></li>
-                            <li class="toggle__item"><a class="font text-ellipsis" href="#">Ровно</a></li>
-                            <li class="toggle__item"><a class="font text-ellipsis" href="#">Ужгород</a></li>
-                            <li class="toggle__item"><a class="font text-ellipsis" href="#">Харьков</a></li>
-                            <li class="toggle__item"><a class="font text-ellipsis" href="#">Херсон</a></li>
-                            <li class="toggle__item"><a class="font text-ellipsis" href="#">Черновцы</a></li>
-                          </ul>
+                          <ul class="toggle__list" id="toggleUkraine"></ul>
                         </div>
                       </div>
                     </li>
                     <li class="menu__item"><a class="font link menu__item--toggle"><span>Туры Россия</span><i class="fas fa-angle-down"></i></a>
                       <div class="triangle toggle">
                         <div class="box-shadow cut">
-                          <ul class="toggle__list">
-                            <li class="toggle__item"><a class="font text-ellipsis" href="#">Винница</a></li>
-                            <li class="toggle__item"><a class="font text-ellipsis" href="#">Днепр</a></li>
-                            <li class="toggle__item"><a class="font text-ellipsis" href="#">Запорожье</a></li>
-                            <li class="toggle__item"><a class="font text-ellipsis" href="#">Киев</a></li>
-                            <li class="toggle__item"><a class="font text-ellipsis" href="#">Кривой Рог</a></li>
-                            <li class="toggle__item"><a class="font text-ellipsis" href="#">Львов</a></li>
-                            <li class="toggle__item"><a class="font text-ellipsis" href="#">Николаев</a></li>
-                            <li class="toggle__item"><a class="font text-ellipsis" href="#">Одесса</a></li>
-                            <li class="toggle__item"><a class="font text-ellipsis" href="#">Полтава</a></li>
-                            <li class="toggle__item"><a class="font text-ellipsis" href="#">Ровно</a></li>
-                            <li class="toggle__item"><a class="font text-ellipsis" href="#">Ужгород</a></li>
-                            <li class="toggle__item"><a class="font text-ellipsis" href="#">Харьков</a></li>
-                            <li class="toggle__item"><a class="font text-ellipsis" href="#">Херсон</a></li>
-                            <li class="toggle__item"><a class="font text-ellipsis" href="#">Черновцы</a></li>
-                          </ul>
+                          <ul class="toggle__list" id="toggleRussia"></ul>
                         </div>
                       </div>
                     </li>
                     <li class="menu__item"><a class="font link menu__item--toggle"><span>Туры Казахстан</span><i class="fas fa-angle-down"></i></a>
                       <div class="triangle toggle">
                         <div class="box-shadow cut">
-                          <ul class="toggle__list">
-                            <li class="toggle__item"><a class="font text-ellipsis" href="#">Винница</a></li>
-                            <li class="toggle__item"><a class="font text-ellipsis" href="#">Днепр</a></li>
-                            <li class="toggle__item"><a class="font text-ellipsis" href="#">Запорожье</a></li>
-                            <li class="toggle__item"><a class="font text-ellipsis" href="#">Киев</a></li>
-                            <li class="toggle__item"><a class="font text-ellipsis" href="#">Кривой Рог</a></li>
-                            <li class="toggle__item"><a class="font text-ellipsis" href="#">Львов</a></li>
-                            <li class="toggle__item"><a class="font text-ellipsis" href="#">Николаев</a></li>
-                            <li class="toggle__item"><a class="font text-ellipsis" href="#">Одесса</a></li>
-                            <li class="toggle__item"><a class="font text-ellipsis" href="#">Полтава</a></li>
-                            <li class="toggle__item"><a class="font text-ellipsis" href="#">Ровно</a></li>
-                            <li class="toggle__item"><a class="font text-ellipsis" href="#">Ужгород</a></li>
-                            <li class="toggle__item"><a class="font text-ellipsis" href="#">Харьков</a></li>
-                            <li class="toggle__item"><a class="font text-ellipsis" href="#">Херсон</a></li>
-                            <li class="toggle__item"><a class="font text-ellipsis" href="#">Черновцы</a></li>
-                          </ul>
+                          <ul class="toggle__list" id="toggleKazahstan"></ul>
                         </div>
                       </div>
                     </li>
                     <li class="menu__item"><a class="font link menu__item--toggle"><span>Туры Белоруссия</span><i class="fas fa-angle-down"></i></a>
                       <div class="triangle toggle">
                         <div class="box-shadow cut">
-                          <ul class="toggle__list">
-                            <li class="toggle__item"><a class="font text-ellipsis" href="#">Винница</a></li>
-                            <li class="toggle__item"><a class="font text-ellipsis" href="#">Днепр</a></li>
-                            <li class="toggle__item"><a class="font text-ellipsis" href="#">Запорожье</a></li>
-                            <li class="toggle__item"><a class="font text-ellipsis" href="#">Киев</a></li>
-                            <li class="toggle__item"><a class="font text-ellipsis" href="#">Кривой Рог</a></li>
-                            <li class="toggle__item"><a class="font text-ellipsis" href="#">Львов</a></li>
-                            <li class="toggle__item"><a class="font text-ellipsis" href="#">Николаев</a></li>
-                            <li class="toggle__item"><a class="font text-ellipsis" href="#">Одесса</a></li>
-                            <li class="toggle__item"><a class="font text-ellipsis" href="#">Полтава</a></li>
-                            <li class="toggle__item"><a class="font text-ellipsis" href="#">Ровно</a></li>
-                            <li class="toggle__item"><a class="font text-ellipsis" href="#">Ужгород</a></li>
-                            <li class="toggle__item"><a class="font text-ellipsis" href="#">Харьков</a></li>
-                            <li class="toggle__item"><a class="font text-ellipsis" href="#">Херсон</a></li>
-                            <li class="toggle__item"><a class="font text-ellipsis" href="#">Черновцы</a></li>
-                          </ul>
+                          <ul class="toggle__list" id="toggleBelarus"></ul>
                         </div>
                       </div>
                     </li>
@@ -148,20 +95,21 @@
                 <div class="cell">
                     <article class="offer cut box-shadow box-shadow--hover">
                       <header class="offer__header"><a class="img img--hover" href="details.html"><img src="./img/header/img/header-index.jpg">
-                          <div class="img__toggle flex-container align-center-middle">
+                          <div class="img__toggle flex-container align-center-middle flex-dir-column">
                             <p class="far fa-eye"></p>
+                            <p class="font font--white text-uppercase">Детальнее об отеле</p>
                           </div></a>
                         <div class="where">
                           <p class="font font--white">Египет, Хургада</p>
                         </div>
-                        <div class="discount flex-container align-center-middle">
+                        <div class="discount discount--small flex-container align-center-middle">
                           <p class="font font--white">-15%</p>
                         </div>
                       </header>
                       <div class="offer__wrapper">
                         <main class="offer__main">
                           <ul class="description">
-                            <li class="flex-container align-middle description__item"><a class="font font--primary text-uppercase" href="details.html">Three Conrners Tri</a></li>
+                            <li class="flex-container align-middle description__item"><a class="font font--primary text-uppercase" href="details.html">Three Conrners Trim</a></li>
                             <li class="flex-container align-baseline description__item">
                               <h6 class="h6 h6--second text-through">$618</h6>
                               <h5 class="h5 h5--primary">$512</h5>
@@ -182,14 +130,11 @@
                             <li class="flex-container align-middle description__item"><img src="./img/people.svg">
                               <p class="font"><span>2 взрослых,</span><span>без детей</span></p>
                             </li>
-                            <li class="description__item last">
-                              <p class="font font--second">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta illum ab labore esse tenetur voluptatum est eum laudantium ullam nesciunt, saepe asperiores, nam cum, vel eaque quibusdam numquam nihil sequi.<a class="font font--primary" href="details.html">Подробнее</a></p>
-                            </li>
                           </ul>
                         </main>
                         <footer class="offer__footer">
                           <div class="flex-container align-middle align-justify flex-wrap">
-                            <p class="font font--green">Добавлено 15 минут назад</p><img class="operator" src="./img/operator/20.png" alt="Join up">
+                            <p class="font font--green"><i class="far fa-clock"></i><span>Обновлено 15 минут назад</span></p><a class="operator" href="#" target="_blank"><img src="./img/operator/20.png" alt="Join up"></a>
                           </div>
                         </footer>
                       </div>
@@ -198,20 +143,21 @@
                 <div class="cell">
                     <article class="offer cut box-shadow box-shadow--hover">
                       <header class="offer__header"><a class="img img--hover" href="details.html"><img src="./img/header/img/header-index.jpg">
-                          <div class="img__toggle flex-container align-center-middle">
+                          <div class="img__toggle flex-container align-center-middle flex-dir-column">
                             <p class="far fa-eye"></p>
+                            <p class="font font--white text-uppercase">Детальнее об отеле</p>
                           </div></a>
                         <div class="where">
                           <p class="font font--white">Египет, Хургада</p>
                         </div>
-                        <div class="discount flex-container align-center-middle">
+                        <div class="discount discount--small flex-container align-center-middle">
                           <p class="font font--white">-15%</p>
                         </div>
                       </header>
                       <div class="offer__wrapper">
                         <main class="offer__main">
                           <ul class="description">
-                            <li class="flex-container align-middle description__item"><a class="font font--primary text-uppercase" href="details.html">Three Conrners Tri</a></li>
+                            <li class="flex-container align-middle description__item"><a class="font font--primary text-uppercase" href="details.html">Three Conrners Trim</a></li>
                             <li class="flex-container align-baseline description__item">
                               <h6 class="h6 h6--second text-through">$618</h6>
                               <h5 class="h5 h5--primary">$512</h5>
@@ -232,14 +178,11 @@
                             <li class="flex-container align-middle description__item"><img src="./img/people.svg">
                               <p class="font"><span>2 взрослых,</span><span>без детей</span></p>
                             </li>
-                            <li class="description__item last">
-                              <p class="font font--second">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta illum ab labore esse tenetur voluptatum est eum laudantium ullam nesciunt, saepe asperiores, nam cum, vel eaque quibusdam numquam nihil sequi.<a class="font font--primary" href="details.html">Подробнее</a></p>
-                            </li>
                           </ul>
                         </main>
                         <footer class="offer__footer">
                           <div class="flex-container align-middle align-justify flex-wrap">
-                            <p class="font font--green">Добавлено 15 минут назад</p><img class="operator" src="./img/operator/20.png" alt="Join up">
+                            <p class="font font--green"><i class="far fa-clock"></i><span>Обновлено 15 минут назад</span></p><a class="operator" href="#" target="_blank"><img src="./img/operator/20.png" alt="Join up"></a>
                           </div>
                         </footer>
                       </div>
@@ -248,20 +191,21 @@
                 <div class="cell">
                     <article class="offer cut box-shadow box-shadow--hover">
                       <header class="offer__header"><a class="img img--hover" href="details.html"><img src="./img/header/img/header-index.jpg">
-                          <div class="img__toggle flex-container align-center-middle">
+                          <div class="img__toggle flex-container align-center-middle flex-dir-column">
                             <p class="far fa-eye"></p>
+                            <p class="font font--white text-uppercase">Детальнее об отеле</p>
                           </div></a>
                         <div class="where">
                           <p class="font font--white">Египет, Хургада</p>
                         </div>
-                        <div class="discount flex-container align-center-middle">
+                        <div class="discount discount--small flex-container align-center-middle">
                           <p class="font font--white">-15%</p>
                         </div>
                       </header>
                       <div class="offer__wrapper">
                         <main class="offer__main">
                           <ul class="description">
-                            <li class="flex-container align-middle description__item"><a class="font font--primary text-uppercase" href="details.html">Three Conrners Tri</a></li>
+                            <li class="flex-container align-middle description__item"><a class="font font--primary text-uppercase" href="details.html">Three Conrners Trim</a></li>
                             <li class="flex-container align-baseline description__item">
                               <h6 class="h6 h6--second text-through">$618</h6>
                               <h5 class="h5 h5--primary">$512</h5>
@@ -282,14 +226,11 @@
                             <li class="flex-container align-middle description__item"><img src="./img/people.svg">
                               <p class="font"><span>2 взрослых,</span><span>без детей</span></p>
                             </li>
-                            <li class="description__item last">
-                              <p class="font font--second">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta illum ab labore esse tenetur voluptatum est eum laudantium ullam nesciunt, saepe asperiores, nam cum, vel eaque quibusdam numquam nihil sequi.<a class="font font--primary" href="details.html">Подробнее</a></p>
-                            </li>
                           </ul>
                         </main>
                         <footer class="offer__footer">
                           <div class="flex-container align-middle align-justify flex-wrap">
-                            <p class="font font--green">Добавлено 15 минут назад</p><img class="operator" src="./img/operator/20.png" alt="Join up">
+                            <p class="font font--green"><i class="far fa-clock"></i><span>Обновлено 15 минут назад</span></p><a class="operator" href="#" target="_blank"><img src="./img/operator/20.png" alt="Join up"></a>
                           </div>
                         </footer>
                       </div>
@@ -298,20 +239,21 @@
                 <div class="cell">
                     <article class="offer cut box-shadow box-shadow--hover">
                       <header class="offer__header"><a class="img img--hover" href="details.html"><img src="./img/header/img/header-index.jpg">
-                          <div class="img__toggle flex-container align-center-middle">
+                          <div class="img__toggle flex-container align-center-middle flex-dir-column">
                             <p class="far fa-eye"></p>
+                            <p class="font font--white text-uppercase">Детальнее об отеле</p>
                           </div></a>
                         <div class="where">
                           <p class="font font--white">Египет, Хургада</p>
                         </div>
-                        <div class="discount flex-container align-center-middle">
+                        <div class="discount discount--small flex-container align-center-middle">
                           <p class="font font--white">-15%</p>
                         </div>
                       </header>
                       <div class="offer__wrapper">
                         <main class="offer__main">
                           <ul class="description">
-                            <li class="flex-container align-middle description__item"><a class="font font--primary text-uppercase" href="details.html">Three Conrners Tri</a></li>
+                            <li class="flex-container align-middle description__item"><a class="font font--primary text-uppercase" href="details.html">Three Conrners Trim</a></li>
                             <li class="flex-container align-baseline description__item">
                               <h6 class="h6 h6--second text-through">$618</h6>
                               <h5 class="h5 h5--primary">$512</h5>
@@ -332,14 +274,11 @@
                             <li class="flex-container align-middle description__item"><img src="./img/people.svg">
                               <p class="font"><span>2 взрослых,</span><span>без детей</span></p>
                             </li>
-                            <li class="description__item last">
-                              <p class="font font--second">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta illum ab labore esse tenetur voluptatum est eum laudantium ullam nesciunt, saepe asperiores, nam cum, vel eaque quibusdam numquam nihil sequi.<a class="font font--primary" href="details.html">Подробнее</a></p>
-                            </li>
                           </ul>
                         </main>
                         <footer class="offer__footer">
                           <div class="flex-container align-middle align-justify flex-wrap">
-                            <p class="font font--green">Добавлено 15 минут назад</p><img class="operator" src="./img/operator/20.png" alt="Join up">
+                            <p class="font font--green"><i class="far fa-clock"></i><span>Обновлено 15 минут назад</span></p><a class="operator" href="#" target="_blank"><img src="./img/operator/20.png" alt="Join up"></a>
                           </div>
                         </footer>
                       </div>
@@ -355,20 +294,21 @@
                 <div class="cell">
                     <article class="offer cut box-shadow box-shadow--hover">
                       <header class="offer__header"><a class="img img--hover" href="details.html"><img src="./img/header/img/header-index.jpg">
-                          <div class="img__toggle flex-container align-center-middle">
+                          <div class="img__toggle flex-container align-center-middle flex-dir-column">
                             <p class="far fa-eye"></p>
+                            <p class="font font--white text-uppercase">Детальнее об отеле</p>
                           </div></a>
                         <div class="where">
                           <p class="font font--white">Египет, Хургада</p>
                         </div>
-                        <div class="discount flex-container align-center-middle">
+                        <div class="discount discount--small flex-container align-center-middle">
                           <p class="font font--white">-15%</p>
                         </div>
                       </header>
                       <div class="offer__wrapper">
                         <main class="offer__main">
                           <ul class="description">
-                            <li class="flex-container align-middle description__item"><a class="font font--primary text-uppercase" href="details.html">Three Conrners Tri</a></li>
+                            <li class="flex-container align-middle description__item"><a class="font font--primary text-uppercase" href="details.html">Three Conrners Trim</a></li>
                             <li class="flex-container align-baseline description__item">
                               <h6 class="h6 h6--second text-through">$618</h6>
                               <h5 class="h5 h5--primary">$512</h5>
@@ -389,14 +329,11 @@
                             <li class="flex-container align-middle description__item"><img src="./img/people.svg">
                               <p class="font"><span>2 взрослых,</span><span>без детей</span></p>
                             </li>
-                            <li class="description__item last">
-                              <p class="font font--second">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta illum ab labore esse tenetur voluptatum est eum laudantium ullam nesciunt, saepe asperiores, nam cum, vel eaque quibusdam numquam nihil sequi.<a class="font font--primary" href="details.html">Подробнее</a></p>
-                            </li>
                           </ul>
                         </main>
                         <footer class="offer__footer">
                           <div class="flex-container align-middle align-justify flex-wrap">
-                            <p class="font font--green">Добавлено 15 минут назад</p><img class="operator" src="./img/operator/20.png" alt="Join up">
+                            <p class="font font--green"><i class="far fa-clock"></i><span>Обновлено 15 минут назад</span></p><a class="operator" href="#" target="_blank"><img src="./img/operator/20.png" alt="Join up"></a>
                           </div>
                         </footer>
                       </div>
@@ -405,20 +342,21 @@
                 <div class="cell">
                     <article class="offer cut box-shadow box-shadow--hover">
                       <header class="offer__header"><a class="img img--hover" href="details.html"><img src="./img/header/img/header-index.jpg">
-                          <div class="img__toggle flex-container align-center-middle">
+                          <div class="img__toggle flex-container align-center-middle flex-dir-column">
                             <p class="far fa-eye"></p>
+                            <p class="font font--white text-uppercase">Детальнее об отеле</p>
                           </div></a>
                         <div class="where">
                           <p class="font font--white">Египет, Хургада</p>
                         </div>
-                        <div class="discount flex-container align-center-middle">
+                        <div class="discount discount--small flex-container align-center-middle">
                           <p class="font font--white">-15%</p>
                         </div>
                       </header>
                       <div class="offer__wrapper">
                         <main class="offer__main">
                           <ul class="description">
-                            <li class="flex-container align-middle description__item"><a class="font font--primary text-uppercase" href="details.html">Three Conrners Tri</a></li>
+                            <li class="flex-container align-middle description__item"><a class="font font--primary text-uppercase" href="details.html">Three Conrners Trim</a></li>
                             <li class="flex-container align-baseline description__item">
                               <h6 class="h6 h6--second text-through">$618</h6>
                               <h5 class="h5 h5--primary">$512</h5>
@@ -439,14 +377,11 @@
                             <li class="flex-container align-middle description__item"><img src="./img/people.svg">
                               <p class="font"><span>2 взрослых,</span><span>без детей</span></p>
                             </li>
-                            <li class="description__item last">
-                              <p class="font font--second">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta illum ab labore esse tenetur voluptatum est eum laudantium ullam nesciunt, saepe asperiores, nam cum, vel eaque quibusdam numquam nihil sequi.<a class="font font--primary" href="details.html">Подробнее</a></p>
-                            </li>
                           </ul>
                         </main>
                         <footer class="offer__footer">
                           <div class="flex-container align-middle align-justify flex-wrap">
-                            <p class="font font--green">Добавлено 15 минут назад</p><img class="operator" src="./img/operator/20.png" alt="Join up">
+                            <p class="font font--green"><i class="far fa-clock"></i><span>Обновлено 15 минут назад</span></p><a class="operator" href="#" target="_blank"><img src="./img/operator/20.png" alt="Join up"></a>
                           </div>
                         </footer>
                       </div>
@@ -455,20 +390,21 @@
                 <div class="cell">
                     <article class="offer cut box-shadow box-shadow--hover">
                       <header class="offer__header"><a class="img img--hover" href="details.html"><img src="./img/header/img/header-index.jpg">
-                          <div class="img__toggle flex-container align-center-middle">
+                          <div class="img__toggle flex-container align-center-middle flex-dir-column">
                             <p class="far fa-eye"></p>
+                            <p class="font font--white text-uppercase">Детальнее об отеле</p>
                           </div></a>
                         <div class="where">
                           <p class="font font--white">Египет, Хургада</p>
                         </div>
-                        <div class="discount flex-container align-center-middle">
+                        <div class="discount discount--small flex-container align-center-middle">
                           <p class="font font--white">-15%</p>
                         </div>
                       </header>
                       <div class="offer__wrapper">
                         <main class="offer__main">
                           <ul class="description">
-                            <li class="flex-container align-middle description__item"><a class="font font--primary text-uppercase" href="details.html">Three Conrners Tri</a></li>
+                            <li class="flex-container align-middle description__item"><a class="font font--primary text-uppercase" href="details.html">Three Conrners Trim</a></li>
                             <li class="flex-container align-baseline description__item">
                               <h6 class="h6 h6--second text-through">$618</h6>
                               <h5 class="h5 h5--primary">$512</h5>
@@ -489,14 +425,11 @@
                             <li class="flex-container align-middle description__item"><img src="./img/people.svg">
                               <p class="font"><span>2 взрослых,</span><span>без детей</span></p>
                             </li>
-                            <li class="description__item last">
-                              <p class="font font--second">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta illum ab labore esse tenetur voluptatum est eum laudantium ullam nesciunt, saepe asperiores, nam cum, vel eaque quibusdam numquam nihil sequi.<a class="font font--primary" href="details.html">Подробнее</a></p>
-                            </li>
                           </ul>
                         </main>
                         <footer class="offer__footer">
                           <div class="flex-container align-middle align-justify flex-wrap">
-                            <p class="font font--green">Добавлено 15 минут назад</p><img class="operator" src="./img/operator/20.png" alt="Join up">
+                            <p class="font font--green"><i class="far fa-clock"></i><span>Обновлено 15 минут назад</span></p><a class="operator" href="#" target="_blank"><img src="./img/operator/20.png" alt="Join up"></a>
                           </div>
                         </footer>
                       </div>
@@ -505,20 +438,21 @@
                 <div class="cell">
                     <article class="offer cut box-shadow box-shadow--hover">
                       <header class="offer__header"><a class="img img--hover" href="details.html"><img src="./img/header/img/header-index.jpg">
-                          <div class="img__toggle flex-container align-center-middle">
+                          <div class="img__toggle flex-container align-center-middle flex-dir-column">
                             <p class="far fa-eye"></p>
+                            <p class="font font--white text-uppercase">Детальнее об отеле</p>
                           </div></a>
                         <div class="where">
                           <p class="font font--white">Египет, Хургада</p>
                         </div>
-                        <div class="discount flex-container align-center-middle">
+                        <div class="discount discount--small flex-container align-center-middle">
                           <p class="font font--white">-15%</p>
                         </div>
                       </header>
                       <div class="offer__wrapper">
                         <main class="offer__main">
                           <ul class="description">
-                            <li class="flex-container align-middle description__item"><a class="font font--primary text-uppercase" href="details.html">Three Conrners Tri</a></li>
+                            <li class="flex-container align-middle description__item"><a class="font font--primary text-uppercase" href="details.html">Three Conrners Trim</a></li>
                             <li class="flex-container align-baseline description__item">
                               <h6 class="h6 h6--second text-through">$618</h6>
                               <h5 class="h5 h5--primary">$512</h5>
@@ -539,14 +473,11 @@
                             <li class="flex-container align-middle description__item"><img src="./img/people.svg">
                               <p class="font"><span>2 взрослых,</span><span>без детей</span></p>
                             </li>
-                            <li class="description__item last">
-                              <p class="font font--second">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta illum ab labore esse tenetur voluptatum est eum laudantium ullam nesciunt, saepe asperiores, nam cum, vel eaque quibusdam numquam nihil sequi.<a class="font font--primary" href="details.html">Подробнее</a></p>
-                            </li>
                           </ul>
                         </main>
                         <footer class="offer__footer">
                           <div class="flex-container align-middle align-justify flex-wrap">
-                            <p class="font font--green">Добавлено 15 минут назад</p><img class="operator" src="./img/operator/20.png" alt="Join up">
+                            <p class="font font--green"><i class="far fa-clock"></i><span>Обновлено 15 минут назад</span></p><a class="operator" href="#" target="_blank"><img src="./img/operator/20.png" alt="Join up"></a>
                           </div>
                         </footer>
                       </div>
@@ -565,7 +496,7 @@
               <div class="row align-justify">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12"><a class="logo"></a>
                   <div class="description">
-                    <p class="font font--white">Сервис сравнения изменений цен последних часов на актуальные туристические предложения во все самые востребованные Страны отдыха от ведущих операторов Украины, России, Белоруссии и Казахстана, позволяющий выбрать тот Тур, который Вам наиболее по душе.</p>
+                    <p class="font font--white font--lg">Свяжитесь с нами: <a class="font--white text-underline" href="#">info@promotour.net</a></p>
                     <div class="flex-container align-middle flex-wrap social">
                       <p class="font font--white text-uppercase" style="margin-right: 10px;">Follow us: </p><a class="fab fa-facebook-f social__item" href="#" target="_blank"></a><a class="fab fa-instagram social__item" href="#" target="_blank"></a><a class="fab fa-telegram-plane social__item" href="#" target="_blank"></a>
                     </div>
@@ -596,7 +527,7 @@
                   <hr>
                   <ul>
                     <li><a class="font font--white link" href="blog.html">Блог</a></li>
-                    <li><a class="font font--white link" href="about.html">О Promo Tour</a></li>
+                    <li><a class="font font--white link" href="about.html">Кто мы</a></li>
                     <li><a class="font font--white link" href="faq.html">Вопросы и Ответы</a></li>
                   </ul>
                 </div>
@@ -610,6 +541,14 @@
           </div>
         </footer>
     </div>
+      <div class="preloader flex-container align-center-middle">
+        <div class="loader">
+          <div class="loader__item loader__item--first"></div>
+          <div class="loader__item loader__item--second"></div>
+          <div class="loader__item loader__item--third"></div>
+        </div>
+      </div>
+      <div class="banner banner--bottom"><i class="close far fa-times-circle"></i></div>
     <script src="./js/custom.js"></script>
   </body>
 </html>

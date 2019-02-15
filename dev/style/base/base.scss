@@ -108,15 +108,14 @@
 }
 #feedback{
 	padding: 150px 0;
+	background-repeat: no-repeat;
+	background-size: cover;
 	background-attachment: fixed;
 	background-image: url('../img/about-index.jpg');
 	@include shadow(rgba(0,0,0,0.4));
-	.h6{
+	.font{
 		position: relative;
 		z-index: 1;
-		@include media-max(767){
-			text-align: center;
-		}
 	}
 }
 

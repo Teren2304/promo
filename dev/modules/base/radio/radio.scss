@@ -1,0 +1,51 @@
+$radio:(
+	height: 15px,
+	width: 15px,
+	border-radius: 3px,
+	border-color: $primary,
+	background-color: #d4d4d4,
+	background-color-active: $primary
+);
+
+.radio{
+	display: flex;
+	align-items: center;
+	span{
+		overflow: hidden;
+		position: relative;
+		margin-right: 5px;
+		height: map-get($radio, height);
+		width: map-get($radio, width);
+		border-radius: map-get($radio, border-radius);
+		background-color: map-get($radio, background-color);
+		&:before{
+			content: '';
+			//transition: all .5s;
+			@include absolute;
+		}
+	}
+	i{
+		transition: none;
+	}
+	&--active{
+		span{
+			&:before{
+				background-color: map-get($radio, background-color-active);
+			}
+		}
+		label{
+			color: map-get($radio, border-color);
+		}
+		i{
+			color: map-get($radio, background-color-active);
+		}
+	}
+	&:hover{
+		label{
+			color: map-get($radio, border-color);
+		}
+		span{
+			border: 1px solid map-get($radio, border-color);
+		}
+	}
+}

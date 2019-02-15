@@ -1,0 +1,39 @@
+.preloader{
+	position: fixed;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 99;
+	background-color: #000;
+	.loader {
+		position: relative;
+		width: 150px;
+		height: 150px;
+		perspective: 780px;
+		&__item {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+			&--first {
+				left: 0%;
+				top: 0%;
+				animation: loader-first 1.15s linear infinite;
+				border-bottom: 5px solid $primary;
+			}
+			&--second {
+				right: 0%;
+				top: 0%;
+				animation: loader-second 1.15s linear infinite;
+				border-right: 5px solid #f4ee41;
+			}
+			&--third {
+				right: 0%;
+				bottom: 0%;
+				animation: loader-third 1.15s linear infinite;
+				border-top: 5px solid #414cf4;
+			}
+		}
+	}
+}

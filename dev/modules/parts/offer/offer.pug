@@ -3,17 +3,18 @@ mixin offer(link)
 		header.offer__header
 			a.img.img--hover(href="details.html")
 				img(src="./img/header/img/header-index.jpg")
-				.img__toggle.flex-container.align-center-middle
+				.img__toggle.flex-container.align-center-middle.flex-dir-column
 					p.far.fa-eye
+					p.font.font--white.text-uppercase Детальнее об отеле
 			.where
 				p.font.font--white Египет, Хургада
-			.discount.flex-container.align-center-middle
+			.discount.discount--small.flex-container.align-center-middle
 				p.font.font--white -15%
 		.offer__wrapper
 			main.offer__main
 				ul.description
 					li.flex-container.align-middle.description__item
-						a.font.font--primary.text-uppercase(href="details.html") Three Conrners Tri
+						a.font.font--primary.text-uppercase(href="details.html") Three Conrners Trim
 					li.flex-container.align-baseline.description__item
 						h6.h6.h6--second.text-through $618
 						h5.h5.h5--primary $512
@@ -47,10 +48,10 @@ mixin offer(link)
 						p.font
 							span 2 взрослых,
 							span без детей
-					li.description__item.last
-						p.font.font--second Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta illum ab labore esse tenetur voluptatum est eum laudantium ullam nesciunt, saepe asperiores, nam cum, vel eaque quibusdam numquam nihil sequi.
-							a.font.font--primary(href="details.html") Подробнее
 			footer.offer__footer
 				.flex-container.align-middle.align-justify.flex-wrap
-					p.font.font--green Добавлено 15 минут назад
-					img(src="./img/operator/20.png", alt="Join up").operator
+					p.font.font--green
+						i.far.fa-clock
+						span Обновлено 15 минут назад
+					a(href="#" target="_blank").operator
+						img(src="./img/operator/20.png", alt="Join up")

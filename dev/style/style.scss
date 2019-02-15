@@ -19,10 +19,12 @@
 @import './dev/modules/base/field/field';
 @import './dev/modules/base/select/select';
 @import './dev/modules/base/textarea/textarea';
+@import './dev/modules/base/radio/radio';
 @import './dev/modules/base/checkbox/checkbox';
 @import './dev/modules/parts/icon/icon';
 
 /* Parts modules */
+@import './dev/modules/parts/preloader/preloader';
 @import './dev/modules/parts/nav/nav';
 @import './dev/modules/parts/logo/logo';
 @import './dev/modules/parts/menu/menu';
@@ -34,7 +36,6 @@
 @import './dev/modules/parts/sort/sort';
 @import './dev/modules/parts/view/view';
 @import './dev/modules/parts/offer/offer';
-@import './dev/modules/parts/form/form';
 
 /* Blog */
 @import './dev/modules/parts/blog/blog';
@@ -51,6 +52,7 @@
 
 
 /* Layout modules */
+@import './dev/modules/parts/banner/banner';
 @import './dev/modules/layout/header/header';
 @import './dev/modules/layout/footer/footer';
 

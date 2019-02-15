@@ -2,28 +2,41 @@ mixin search(value)
 	.search.flex-container.align-middle.align-right.flex-wrap&attributes(attributes)
 		.search__block
 			.dropdown
-				p.font.font--sm.font--second Вылет из
-				+field('text', 'Откуда', 'search-from', false)
+				p.font.font--sm.font--second.dropdown__text Вылет:
+				.flex-container.align-middle.field.text-ellipsis.search-from
+					span.font
+					span.font
 			.dropdown__block.dropdown__block--from.triangle
-				.box-shadow.cut
+				.box-shadow.cut.fly
+					p.font.fly__title.first.text-uppercase Страна:
+					.flex-container.align-middle.flex-wrap.fly__wrapper
+					p.font.fly__title.last.text-uppercase Город:
+					.flex-container.align-middle.flex-wrap.fly__list
 		.search__block
 			.dropdown
-				p.font.font--sm.font--second Прилет куда
-				+field('text', 'Куда', 'search-where', false)
+				p.font.font--sm.font--second.dropdown__text Прилет:
+				.flex-container.align-middle.field.text-ellipsis.search-where
+					span.font
+					span.font
 			.dropdown__block.dropdown__block--where.triangle
-				.box-shadow.cut
-		.search__block
-			.dropdown
-				p.font.font--sm.font--second Интервал даты с
-				+field('date', '', 'search-date-from', false)
-		.search__block
-			.dropdown
-				p.font.font--sm.font--second Интервал даты по
-				+field('date', '', 'search-date-to', false)
+				.box-shadow.cut.fly
+					p.font.fly__title.first.text-uppercase Страна:
+					.flex-container.align-middle.flex-wrap.fly__wrapper
+					p.font.fly__title.last.text-uppercase Город:
+					.flex-container.align-middle.flex-wrap.fly__list
 
 		.search__block
 			.dropdown
-				p.font.font--sm.font--second Количество ночей
+				p.font.font--sm.font--second.dropdown__text Дата вылета с:
+				+field('date', '', '', false).search-date-from
+		.search__block
+			.dropdown
+				p.font.font--sm.font--second.dropdown__text Дата вылета по:
+				+field('date', '', '', false).search-date-to
+
+		.search__block
+			.dropdown
+				p.font.font--sm.font--second.dropdown__text Количество ночей:
 				.flex-container.align-middle.field
 					p.font
 						| от 
@@ -35,81 +48,116 @@ mixin search(value)
 				.box-shadow.cut
 					.inner.flex-container.align-middle
 						p.font.inner__text От
-						button.decrement(min="1") -
+						button.decrement(min="6") -
 						p.font.font--md.inner__title.search-night-from(data="nightFrom")
-						button.increment(max="7") +
+						button.increment(max="28") +
 					.inner.flex-container.align-middle
 						p.font.inner__text До
-						button.decrement(min="8") -
+						button.decrement(min="5") -
 						p.font.font--md.inner__title.search-night-to(data="nightTo")
 						button.increment(max="28") +
 					+button('button').button--primary Готово
 
 		.search__block
 			.dropdown
-				p.font.font--sm.font--second Класс отеля
+				p.font.font--sm.font--second.dropdown__text Класс отеля:
 				.flex-container.align-middle.field
 					p.font.search-rate
 			.dropdown__block.dropdown__block--rate.triangle
 				.box-shadow.cut
 					.inner
 						ul.inner__list
-							//- li
-							//- 	+checkbox('allstar', 'Все отели')(name="rate", value="0")
 							li
-								input.checkbox(type="checkbox", id="2star")(name="rate", value="2")
-								label(for="2star")
-									i.fas.fa-star
-									i.fas.fa-star
+								.radio(value="0").radio--all
+									span
+									label.font Все отели
 							li
-								input.checkbox(type="checkbox", id="3star")(name="rate", value="3")
-								label(for="3star")
-									i.fas.fa-star
-									i.fas.fa-star
-									i.fas.fa-star
+								.radio(value="2")
+									span
+									label.font
+										i.fas.fa-star
+										i.fas.fa-star
 							li
-								input.checkbox(type="checkbox", id="4star")(name="rate", value="4", checked)
-								label(for="4star")
-									i.fas.fa-star
-									i.fas.fa-star
-									i.fas.fa-star
-									i.fas.fa-star
+								.radio(value="3")
+									span
+									label.font
+										i.fas.fa-star
+										i.fas.fa-star
+										i.fas.fa-star
 							li
-								input.checkbox(type="checkbox", id="5star")(name="rate", value="5", checked)
-								label(for="5star")
-									i.fas.fa-star
-									i.fas.fa-star
-									i.fas.fa-star
-									i.fas.fa-star
-									i.fas.fa-star
+								.radio(value="4").radio--active
+									span
+									label.font
+										i.fas.fa-star
+										i.fas.fa-star
+										i.fas.fa-star
+										i.fas.fa-star
+							li
+								.radio(value="5").radio--active
+									span
+									label.font
+										i.fas.fa-star
+										i.fas.fa-star
+										i.fas.fa-star
+										i.fas.fa-star
+										i.fas.fa-star
+
 					+button('button').button--primary Готово
 
 		.search__block
 			.dropdown
-				p.font.font--sm.font--second Питание
+				p.font.font--sm.font--second.dropdown__text Питание:
 				.flex-container.align-middle.field
-					p.font.text-uppercase.search-food
+					p.font.search-food
 			.dropdown__block.dropdown__block--food.triangle
 				.box-shadow.cut
 					.inner
 						ul.inner__list
 							li
-								+checkbox('ob', 'Без питания (OB)')(name="food", value="ob")
+								.radio(value="0").radio--all
+									span
+									label.font Любое питание
 							li
-								+checkbox('bb', 'Затрак (BB)')(name="food", value="bb")
+								.radio(value="OB")
+									span
+									label.font Без питания (OB)		
 							li
-								+checkbox('hb', 'Завтрак и ужин (HB)')(name="food", value="hb")
+								.radio(value="BB")
+									span
+									label.font Затрак (BB)
 							li
-								+checkbox('fb', 'Завтрак, обед и ужин (FB)')(name="food", value="fb")
+								.radio(value="HB")
+									span
+									label.font Завтрак и ужин (HB)
 							li
-								+checkbox('ai', 'Все включено (AI)')(name="food", value="ai", checked)
+								.radio(value="FB")
+									span
+									label.font Завтрак, обед и ужин (FB)
 							li
-								+checkbox('uai', 'Ультра все включено (UAI)')(name="food", value="uai", checked)
+								.radio(value="AD").radio--active
+									span
+									label.font Все включено (AI)
+							li
+								.radio(value="UAI").radio--active
+									span
+									label.font Ультра все включено (UAI)
+							//- li
+							//- 	+checkbox('ob', 'Без питания (OB)')(name="food", value="ob")
+							//- li
+							//- 	+checkbox('bb', 'Затрак (BB)')(name="food", value="bb")
+							//- li
+							//- 	+checkbox('hb', 'Завтрак и ужин (HB)')(name="food", value="hb")
+							//- li
+							//- 	+checkbox('fb', 'Завтрак, обед и ужин (FB)')(name="food", value="fb")
+							//- li
+							//- 	+checkbox('ai', 'Все включено (AI)')(name="food", value="ai", checked)
+							//- li
+							//- 	+checkbox('uai', 'Ультра все включено (UAI)')(name="food", value="uai", checked)
 					+button('button').button--primary Готово
 
 		.search__block
 			.dropdown
-				p.font.font--sm.font--second Кто едет
+				p.font.font--sm.font--second.dropdown__text Кто путешествует:
 				.flex-container.align-middle.field
 					p.font
 						span.search-adults.search-adults-text
