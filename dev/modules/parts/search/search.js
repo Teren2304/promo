@@ -8,7 +8,7 @@ function Data(){
 	this.dateFrom = '';
 	this.dateWhere = '';
 	this.nightFrom = 7;
-	this.nightWhere = 21;
+	this.nightWhere = 10;
 	this.rateHotel = [4, 5];
 	this.foodHotel = ['AI', 'UAI'];
 	this.adults = 2;
@@ -92,20 +92,57 @@ function Search(){
 		console.log(this.childrenAgeThird);
 	}
 
+	this.checkFromMax= function(max){
+		if (this.nightFrom < max) {
+			$('.search-night-from').prev().removeClass('disabled');
+		}
+		else{
+			this.disabled(this.nightFrom, $('.search-night-from').next(), max, 'increment');
+		}
+	}
+
+	this.checkToMax = function(max){
+		if (this.nightWhere < max) {
+			$('.search-night-to').prev().removeClass('disabled');
+		}
+		else{
+			this.disabled(this.nightWhere, $('.search-night-to').next(), max, 'increment');
+		}
+	}
+
+	this.checkFromMin = function(min){
+		if (this.nightFrom < min) {
+			$('.search-night-from').prev().removeClass('disabled');
+		}
+		else{
+			this.disabled(this.nightFrom, $('.search-night-from').prev(), min, 'decrement');
+		}
+	}
+
+	this.checkToMin = function(min){
+		if (this.nightWhere < min) {
+			$('.search-night-to').prev().removeClass('disabled');
+		}
+		else{
+			this.disabled(this.nightWhere, $('.search-night-to').prev(), min, 'decrement');
+		}
+	}
+
 	this.increment = function(max, item, element){
 		if (item == 'nightFrom') {
-			if (this.nightFrom < max) {
-				this.nightFrom ++;
-				this.fieldNightFrom.text(this.nightFrom);
+			this.nightFrom ++;
+			this.fieldNightFrom.text(this.nightFrom);
+			this.checkFromMax(max);
+			if (this.nightFrom > this.nightWhere) {
+				this.nightWhere = this.nightFrom;
+				this.fieldNightWhere.text(this.nightWhere);
+				this.checkToMax(max);
 			}
-			this.disabled(this.nightFrom, element, max, 'increment');
 		}
 		else if (item == 'nightTo') {
-			if (this.nightWhere  < max) {
-				this.nightWhere ++;
-				this.fieldNightWhere.text(this.nightWhere);
-			}
-			this.disabled(this.nightWhere, element, max, 'increment');
+			this.nightWhere++;
+			this.fieldNightWhere.text(this.nightWhere);
+			this.checkToMax(max);
 		}
 		else if (item == 'adults') {
 			if (this.adults  < max) {
@@ -120,7 +157,6 @@ function Search(){
 				this.children ++;
 				this.fieldChildren.text(this.children);
 				var html = '<div class="inner" id="child'+this.children+'">'+
-				              '<div class="flex-container align-middle align-justify">'+
 				                '<p class="font">'+this.children+' ребенок: </p>'+
 				                  '<select class="select inner__select child'+this.children+'">'+
 				                    '<option value="0">До года</option>'+
@@ -137,7 +173,6 @@ function Search(){
 				                    '<option value="11">11 лет</option>'+
 				                    '<option value="12">12 лет</option>'+
 				                  '</select>'+
-				              '</div>'+
 				            '</div>';  
 			    $('.dropdown__block--who .wrapper').append(html);
 			}
@@ -149,18 +184,19 @@ function Search(){
 
 	this.decrement = function(min, item, element){
 		if (item == 'nightFrom') {
-			if (this.nightFrom  > min) {
-				this.nightFrom --;
-				this.fieldNightFrom.text(this.nightFrom);
-			}
-			this.disabled(this.nightFrom, element, min, 'decrement');
+			this.nightFrom --;
+			this.fieldNightFrom.text(this.nightFrom);
+			this.checkFromMin(min);
 		}
 		else if (item == 'nightTo') {
-			if (this.nightWhere  > min) {
-				this.nightWhere --;
-				this.fieldNightWhere.text(this.nightWhere);
+			this.nightWhere--;
+			this.fieldNightWhere.text(this.nightWhere);
+			this.checkToMin(min);
+			if (this.nightFrom > this.nightWhere) {
+				this.nightFrom = this.nightWhere;
+				this.fieldNightFrom.text(this.nightWhere);
+				this.checkFromMin(min);
 			}
-			this.disabled(this.nightWhere, element, min, 'decrement');
 		}
 		else if (item == 'adults') {
 			if (this.adults  > min) {
