@@ -1,62 +1,62 @@
 extends ../template/template.pug
 block content
-	.page
-		+header(style="background-image: url('./img/header/img/header-index.jpg')")
-			+nav.nav--default
-				.container.flex-container.align-middle.align-justify
-					+logo('/')
-					+menu
-					+show-menu
+		.page
+			+header(style="background-image: url('./img/header/img/header-index.jpg')")
+				+nav.nav--default
+					.container.flex-container.align-middle.align-justify
+						+logo('/')
+						+menu
+						+show-menu
 
-			.container-fluid
-				.container
-					.header__info.text-center
-						h1.h1.h1--white Все самые актуальные Промо туры во все точки Мира
-						hr
-						h6.h6.h6--white Oт основных Туристических Операторов Украины, России, Казахстана и Белоруссии. 
-
-			.container-fluid
-				.container
-					+search
-
-		main.main
-			section.section#options
 				.container-fluid
 					.container
-						.flex-container.align-middle.align-justify
-							+sort
-							+view
+						.header__info.text-center
+							h1.h1.h1--white Все самые актуальные Промо туры во все точки Мира
+							hr
+							h6.h6.h6--white Oт основных Туристических Операторов Украины, России, Казахстана и Белоруссии. 
 
-			section.section#proposal
 				.container-fluid
 					.container
-						.row
-							.cell
-								+offer
-							.cell
-								+offer
-							.cell
-								+offer
-							.cell
-								+offer
-							.cell
-								+offer
-							.cell
-								+offer
-							.cell
-								+offer
-							.cell
-								+offer
+						+search
 
-						+button('button').button--primary.button--more Загрузить записи
-						+banner.banner--index
+			main.main
+				section.section#options
+					.container-fluid
+						.container
+							.flex-container.align-middle.align-justify
+								+sort
+								+view
+
+				section.section#proposal
+					.container-fluid
+						.container
+							.row
+								.cell
+									+offer
+								.cell
+									+offer
+								.cell
+									+offer
+								.cell
+									+offer
+								.cell
+									+offer
+								.cell
+									+offer
+								.cell
+									+offer
+								.cell
+									+offer
+
+							+button('button').button--primary.button--more Показать еще
+							+banner.banner--index
 
 
-			section.section#feedback
-				.container-fluid
-					.container
-						.row.align-center.align-middle
-							.col-12.col-sm-12.col-md-12.col-lg-6.col-xl-6
-								p.font.font--white.font--lg.text-center Сервис сравнения изменений цен последних часов на актуальные туристические предложения во все самые востребованные Страны отдыха от ведущих операторов Украины, России, Белоруссии и Казахстана, позволяющий выбрать тот Тур, который Вам наиболее по душе.
+				section.section#feedback
+					.container-fluid
+						.container
+							.row.align-center.align-middle
+								.col-12.col-sm-12.col-md-12.col-lg-6.col-xl-6
+									p.font.font--white.font--lg.text-center Сервис сравнения изменений цен последних часов на актуальные туристические предложения во все самые востребованные Страны отдыха от ведущих операторов Украины, России, Белоруссии и Казахстана, позволяющий выбрать тот Тур, который Вам наиболее по душе.
 
-		+footer
+			+footer

@@ -1,3 +1,4 @@
+
 function Data(){
 	Store.call(this);
 
@@ -305,9 +306,6 @@ function Search(){
 		wrapper.empty("");
 		/*if (data != -1) {*/
 			//console.log(list[data].city.length)
-			if (!data) {
-				data = 0;
-			}
 			if (list[data].city.length) {
 				title.show();
 				$.each(list[data].city, function(index, item) {
